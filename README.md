@@ -6,7 +6,7 @@ Presentation for the _IDEs & Tools_ track of [JavaLand 2015](http://www.javaland
 
 ### ...for everyone
 
-1. Download _Source Code (zip)_ of [latest release](https://github.com/bkimminich/juice-shop/releases/latest)
+1. Download _Source Code (zip)_ of [latest release](https://github.com/bkimminich/github-service-universe/releases/latest)
 2. Unpack ```<version>.zip``` to disk
 3. ```$ cd github-service-universe```
 4. Open ```index.html``` with your favorite browser
