@@ -1,21 +1,16 @@
 {
-  "name": "reveal.js",
-  "version": "2.6.2",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://lab.hakim.se/reveal-js",
-  "subdomain": "revealjs",
+  "name": "github-service-universe",
+  "version": "0.0.1",
+  "description": "Presentation \"GitHub Service Universe\" for JavaLand 2015",
+  "homepage": "https://github.com/bkimminich/github-service-universe",
   "scripts": {
     "test": "grunt test",
-    "start": ""
+    "start": "grunt serve"
   },
-  "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
-  },
+  "author": "Bjoern Kimminich",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/bkimminich/github-service-universe.git"
   },
   "engines": {
     "node": "~0.10.0"
@@ -40,7 +35,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/hakimel/reveal.js/blob/master/LICENSE"
+      "url": "https://github.com/bkimminich/github-service-universe/blob/master/LICENSE.md"
     }
   ]
 }
