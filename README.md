@@ -1,6 +1,6 @@
 # GitHub Service Universe [![Build Status](https://travis-ci.org/bkimminich/github-service-universe.png?branch=master)](https://travis-ci.org/bkimminich/github-service-universe)
 
-Presentation for the _IDEs & Tools_ track [JavaLand 2015](http://www.javaland.eu/), 24.-25.03.2015 @ Phantasialand, Bruehl (Germany)
+Presentation for the _IDEs & Tools_ track of [JavaLand 2015](http://www.javaland.eu/)
 
 ## Setup...
 
