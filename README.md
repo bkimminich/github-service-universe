@@ -25,6 +25,7 @@ Presentation for the _IDEs & Tools_ track of [JavaLand 2015](http://www.javaland
 
 - Presentation created with [reveal.js](https://github.com/hakimel/reveal.js)
 - 3D scenes created with [three.js](https://github.com/mrdoob/three.js/)
+- Planets based on [threex.planets.js](https://github.com/jeromeetienne/threex.planets)
 - All logos used in this presentation belong to their respective owners 
 
 ## License
