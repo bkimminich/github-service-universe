@@ -1,4 +1,5 @@
 <!doctype html>
+<!--suppress CheckImageSize -->
 <html lang="en">
 
 	<head>
@@ -44,8 +45,8 @@
 			<div class="slides">
                 <section>
                     <section>
+                        <h3>Exploring the</h3>
                         <h1>GitHub Service Universe</h1>
-                        <h3>All-round care <del>free</del> ful Software Development with GitHub Services</h3>
                         <p>
                             <small>Created by <a href="http://kimminich.de">Björn Kimminich</a> / <a href="http://twitter.com/bkimminich">@bkimminich</a></small>
                         </p>
@@ -54,18 +55,26 @@
                     <section>
                         <h2>Björn Kimminich</h2>
                         <ul>
-                            <li>Division Architect at <a href="http://kuehne-nagel.com">Kuehne + Nagel (AG & Co.) KG</a></li>
-                            <li>Java Lecturer at <a href="http://www.nordakademie.de/">Nordakademie gAG</a></li>
+                            <li>Division Architect &amp; Security Officer @ <a href="http://kuehne-nagel.com">Kuehne + Nagel (AG & Co.) KG</a></li>
+                            <li>Lecturer for Software Development @ <a href="http://www.nordakademie.de/">Nordakademie gAG</a></li>
+                            <li>Member &amp; Contributor @ <a href="http://www.owasp.org/">Open Web Application Security Project</a></li>
                         </ul>
                     </section>
 
                     <section>
                         <h3>Disclaimer</h3>
                         <p>
-                            This is not a marketing talk. It is a compilation of personal experience gathered while working
+                            <strong>This is not a marketing talk.</strong> It is a compilation of personal experience gathered while working
                             on two of my own public repositories. I am neither affiliated with nor paid or otherwise reimbursed
-                            by GitHub or any other company behind the products mentioned in this presentation. No product evaluation
-                            or comparison study of any kind was conducted prior to choosing the services presented here.
+                            by GitHub* or any other company behind the products mentioned in this presentation.  No product evaluation or
+                            comparison study of any kind was conducted prior to choosing the services presented here.
+                        </p>
+                        <p>
+                            Only services that are entirely <strong>free for open source</strong> projects are presented in this talk.
+                        </p>
+                        <hr>
+                        <p>
+                            <small>*I even bought the shirt I am wearing with my own money.</small>
                         </p>
                     </section>
                 </section>
@@ -73,45 +82,170 @@
 				<section>
                     <h2>Agenda</h2>
                     <ol>
-                        <li>Explaining <a href="https://github.com">GitHub</a> in 5 minutes</li>
-                        <li>Intro to <a href="https://github.com/github/github-services">GitHub Services</a> & Webhooks</li>
+                        <li>A very brief introduction to <a href="https://github.com">GitHub</a></li>
+                        <li>GitHub <a href="https://developer.github.com/v3/repos/hooks/">Webhooks</a> &amp; <a href="https://github.com/github/github-services">Services Hooks</a></li>
                         <li>Universe of the polyglot <a href="https://github.com/bkimminich/kata-tcg">kata-tcg</a> project</li>
                         <li>Universe of the full-JS <a href="https://github.com/bkimminich/juice-shop">juice-shop</a> webapp</li>
                     </ol>
 				</section>
 
                 <section>
-                    <section>
+                    <section data-transition="none">
                         <h2>GitHub</h2>
+                        <p>
+                            Collaborative Git repository hosting service.
+                        </p>
+                        <img src="assets/logos/GitHub-Mark-Light-120px-plus.png" width="200" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <a href="http://github.com/">http://github.com/</a>
+                        </p>
                     </section>
-                    <section>
-                        <h3>Git Repository...</h3>
-                        <ul>
-                            <li>unlimited number of public repos for free</li>
-                            <li>only private repos cost money</li>
-                        </ul>
+                    <section data-transition="none">
+                        <h2>If you've never heard about GitHub before...</h2>
+                        <p>
+                            ...you preferred to focus on other bleeding edge tools and tech in the past years?
+                        </p>
+                        <img src="assets/logos/murakamicat.png" width="500" style="background: rgba(255, 255, 255, 0.48);"/>
+                        <p>
+                            <small>Fact #1: GitHub offers free hosting of public Git repositories!</small>
+                        </p>
                     </section>
-                    <section>
-                        <h3>...on steroids</h3>
-                        <ul>
-                            <li>Collaboration through forks & pull requests</li>
-                            <li>Issue tracker for feature requests and bugs</li>
-                            <li>Project pages and wikis</li>
-                            <li>Statistics and fancy graphs</li>
-                            <li>Social features like following users, favstarring projects etc.</li>
-                        </ul>
+                    <section data-transition="none">
+                        <h2>If you've never heard about GitHub before...</h2>
+                        <p>
+                            ...you are still on Subversion?
+                        </p>
+                        <img src="assets/logos/mummytocat.gif" width="500"/>
+                        <p>
+                            <small>Fact #2: Offering a sophisticated web-based graphical interface, GitHub still remains 100% compatible with the <code>git</code> CLI.</small>
+                        </p>
+                    </section>
+                    <section data-transition="none">
+                        <h2>If you've never heard about GitHub before...</h2>
+                        <p>
+                            ...CVS?
+                        </p>
+                        <img src="assets/logos/spectrocat.png" width="500"/>
+                        <p>
+                            <small>Fact #3: GitHub supports collaborative development through e.g. forking and pull requests.</small>
+                        </p>
+                    </section>
+                    <section data-transition="none">
+                        <h2>If you've never heard about GitHub before...</h2>
+                        <p>
+                            ...you might just have been busy with other things?
+                        </p>
+                        <img src="assets/logos/nyantocat.gif" width="500"/>
+                        <p>
+                            <small>Fact #4: GitHub (optionally) adds an issue tracker, wiki and project page to each repository.</small>
+                        </p>
+                    </section>
+                    <section data-transition="none">
+                        <h2>If you've never heard about GitHub before...</h2>
+                        <p>
+                            ...you might have realized by now that you're in the wrong talk? <strong>D'oh!</strong>
+                        </p>
+                        <img src="assets/logos/homercat.png" width="500" style="background: rgba(255, 255, 255, 0.48);"/>
+                        <p>
+                            <small>Fact #5: Repository statistics and social extras like Feeds, Followers &amp; Favorites are part of GitHub.</small>
+                        </p>
                     </section>
                 </section>
 
                 <section>
                     <section>
-                        <h2>GitHub Services</h2>
-                    </section>
-                    <section>
-                        <h3>Example: Twitter</h3>
+                        <h2>Webhooks & Service Hooks</h2>
+                        <p>
+                            Individual &amp; Third Party Service Integration
+                        </p>
+                        <img src="assets/logos/GitHub-Mark-Light-120px-plus.png" width="200" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <a href="https://developer.github.com/webhooks/">https://developer.github.com/webhooks/</a>
+                        </p>
                     </section>
                     <section>
                         <h3>Webhooks</h3>
+                        <ul>
+                            <li>Subscription to events on GitHub.com</li>
+                            <li>Used to integrate individual applications or tools</li>
+                            <li>Installation on <a href="https://developer.github.com/v3/orgs/hooks/">organization</a> or <a href="https://developer.github.com/v3/repos/hooks/">repository level</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Event Types &amp; Payloads</h3>
+                        <ul>
+                            <li>GitHub sends JSON payloads via <code>HTTP POST</code> only</li>
+                            <li>Types &amp; payloads mirror* the <a href="https://developer.github.com/v3/activity/events/types/">Event API</a></li>
+                        </ul>
+                        <img src="assets/screenshots/ghservice-events.png" width="600"/>
+                        <p>
+                            <small>*Some event types only exist for Webhooks, others are only for GitHub internal use. The <code>push</code> payload is the only one that is augmented with more details specifically for the Webhook API.</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Contents of a <code>push</code> event payload</h3>
+                        <img src="assets/screenshots/ghservice-push_payload.png" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <small>Payload additionally contains <code>repository</code>, <code>head_commit</code>, <code>pusher</code> and <code>sender</code> information.</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>179 pre-defined Service Hooks</h3>
+                        <img src="assets/service-tagcat.png" width="600" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <a href="https://github.com/github/github-services">https://github.com/github/github-services</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Webhooks vs. Service Hooks</h3>
+                        <ul>
+                            <li>Service Hooks can only be installed on repositories</li>
+                            <li>Only one Service Hook per integrator</li>
+                            <li>Supported events depend on service implementation</li>
+                            <li>Services come with their own unique configuration</li>
+                        </ul>
+                        <hr>
+                        <p>
+                            <small>GitHub recommends Webhooks for all new integrations using <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization. The existing <a href="https://github.com/github/github-services">github-service repository</a> is not accepting any new services.</small>
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Service Hook example: Twitter</h3>
+                        <img src="assets/logos/Twitter_logo_white.png" width="200" style="background: none; border:none; box-shadow:none;"/>
+                    </section>
+                    <section>
+                        <h3>Webhooks &amp; Services menu item in repository Settings</h3>
+                        <img src="assets/screenshots/twitter01.png"/>
+                    </section>
+                    <section>
+                        <h3>Adding Twitter as a Service</h3>
+                        <img src="assets/screenshots/twitter02.png"/>
+                    </section>
+                    <section>
+                        <h3>The Twitter Service configuration</h3>
+                        <img src="assets/screenshots/twitter03.png"/>
+                    </section>
+                    <section>
+                        <h3>Authorizing GitHub to tweet from a Twitter account</h3>
+                        <img src="assets/screenshots/twitter04.png"/>
+                    </section>
+                    <section>
+                        <h3>Configuring message format and trigger branch</h3>
+                        <img src="assets/screenshots/twitter05.png"/>
+                    </section>
+                    <section>
+                        <h3>Sending a test payload</h3>
+                        <img src="assets/screenshots/twitter06.png"/>
+                        <p>
+                            <small>The Test Service function triggers <strong>the real Service</strong> once for the most recent commit!</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>The Tweet composed and published by the GitHub Service</h3>
+                        <img src="assets/screenshots/twitter07.png"/>
                     </section>
                 </section>
 
@@ -144,22 +278,72 @@
                     <h2>Notifications</h2>
                 </section>
                 <section>
-                    <h3>NMA</h3>
-                    <p>
-                        Platform for delivering push notifications from virtually any application to an Android device.
-                    </p>
-                    <p>
-                        <a href="http://www.notifymyandroid.com/">http://www.notifymyandroid.com/</a>
-                    </p>
+                    <section>
+                        <h3>NMA</h3>
+                        <p>
+                            Platform for delivering push notifications from virtually any application to an Android device.
+                        </p>
+                        <img src="assets/logos/nma_logo.png" width="200" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <a href="http://www.notifymyandroid.com/">http://www.notifymyandroid.com/</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Install free* NMA Android App</h3>
+                        <img src="assets/screenshots/nma02.png"/>
+                        <p>
+                            <small>*The number of receivable notifications per day is limited. Unlimited premium account available via in-app purchase.</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Generate API Keys for each Notifier</h3>
+                        <img src="assets/screenshots/nma01.png"/>
+                    </section>
+                    <section>
+                        <h3>Enter API Key in NMA Service config</h3>
+                        <img src="assets/screenshots/nma04.png"/>
+                        <p>
+                            <small>For convenience you can use the same API Key for all your GitHub repositories.</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Notification on every <code>push</code> to GitHub</h3>
+                        <img src="assets/screenshots/nma03.png"/>
+                    </section>
                 </section>
                 <section>
-                    <h3>Amazon SNS</h3>
-                    <p>
-                        <strong>S</strong>imple <strong>N</strong>otification <strong>S</strong>ervice enables applications, end-users, and devices to instantly send and receive notifications from the cloud.
-                    </p>
-                    <p>
-                        <a href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns/</a>
-                    </p>
+                    <section>
+                        <h3>Amazon SNS</h3>
+                        <p>
+                            <strong>S</strong>imple <strong>N</strong>otification <strong>S</strong>ervice enables applications, end-users, and devices to instantly send and receive notifications from the cloud.
+                        </p>
+                        <img src="assets/logos/SimpleIcon_SNS.png" width="200" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <a href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns/</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Create global topic in SNS Dashboard</h3>
+                        <img src="assets/screenshots/sns01.png"/>
+                    </section>
+                    <section>
+                        <h3>Create Subscriber for SNS Topic</h3>
+                        <img src="assets/screenshots/sns02.png"/>
+                    </section>
+                    <section>
+                        <h3>Configure SNS Service in GitHub</h3>
+                        <img src="assets/screenshots/sns03.png"/>
+                        <p>
+                            <small>For convenience you can use the same SNS Topic for all your GitHub repositories.</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>On <code>push</code> receive sexy JSON* via Email</h3>
+                        <img src="assets/screenshots/sns04.png"/>
+                        <p>
+                            <small>If you're not so much into JSON I'm sure you'll find a Webhook subscriber that is...</small>
+                        </p>
+                    </section>
                 </section>
 
                 <section>
@@ -171,6 +355,7 @@
                         <p>
                             Hosted continuous integration service providing different runtimes for different languages.
                         </p>
+                        <img src="assets/logos/travis-mascot-200px.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                         <p>
                             <a href="https://travis-ci.org/">https://travis-ci.org/</a>
                         </p>
@@ -202,6 +387,7 @@
                         <p>
                             Works with continuous integration servers to provide test coverage history and statistics.
                         </p>
+                        <img src="assets/logos/coveralls.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                         <p>
                             <a href="https://coveralls.io/">https://coveralls.io/</a>
                         </p>
@@ -217,6 +403,7 @@
                         <p>
                             Automated code review for Ruby, JS, and PHP providing feedback on code quality and test coverage.
                         </p>
+                        <img src="assets/logos/codeclimate.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                         <p>
                             <a href="https://codeclimate.com/">https://codeclimate.com/</a>
                         </p>
@@ -232,6 +419,7 @@
                         <p>
                             Provides software quality and security testing solutions.
                         </p>
+                        <img src="assets/logos/Coverity-Logo.jpg" width="200" style="background: none; border:none; box-shadow:none;"/>
                         <p>
                             <a href="http://www.coverity.com/">http://www.coverity.com/</a>
                         </p>
@@ -250,6 +438,7 @@
                     <p>
                         Notification System for Software Libraries showing outdated dependencies in different supported project files.
                     </p>
+                    <img src="assets/logos/versioneye.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                     <p>
                         <a href="https://www.versioneye.com/">https://www.versioneye.com/</a>
                     </p>
@@ -293,6 +482,7 @@
                     <p>
                         Automated cross-browser and mobile testing in the cloud for CI.
                     </p>
+                    <img src="assets/logos/saucelabs.jpg" width="200" style="background: none; border:none; box-shadow:none;"/>
                     <p>
                         <a href="https://saucelabs.com/">https://saucelabs.com/</a>
                     </p>
@@ -306,6 +496,7 @@
                     <p>
                         Reliable, scalable, and user-friendly Platform-as-a-Service for <a href="http://nodejs.org/">node.js</a> apps.
                     </p>
+                    <img src="assets/logos/nodejitsu-transparent.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                     <p>
                         <a href="https://www.nodejitsu.com/">https://www.nodejitsu.com/</a>
                     </p>
@@ -315,6 +506,7 @@
                     <p>
                         Open platform for distributed applications for developers and sysadmins.
                     </p>
+                    <img src="assets/logos/docker.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                     <p>
                         <a href="https://docker.com/">https://docker.com/</a>
                     </p>
@@ -328,6 +520,7 @@
                     <p>
                         Monitoring of project dependencies and alerts for updates and security vulnerabilities.
                     </p>
+                    <img src="assets/logos/gemnasium_logo-big.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                     <p>
                         <a href="https://gemnasium.com/">https://gemnasium.com/</a>
                     </p>
@@ -337,6 +530,7 @@
                     <p>
                         Overview of project dependencies for <a href="http://nodejs.org/">node.js</a> apps.
                     </p>
+                    <img src="assets/logos/david.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                     <p>
                         <a href="https://david-dm.org/">https://david-dm.org/</a>
                     </p>
@@ -351,6 +545,7 @@
                         <p>
                             Lightweight Kanban Board offering instant project management for GitHub issues.
                         </p>
+                        <img src="assets/logos/HuBoardSplash.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                         <p>
                             <a href="https://huboard.com/">https://huboard.com/</a>
                         </p>
@@ -378,6 +573,7 @@
                         <p>
                             Funding platform for open-source software where users can create/collect bounties and pledge to fundraisers.
                         </p>
+                        <img src="assets/logos/Bountysource-square-100.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                         <p>
                             <a href="https://www.bountysource.com/">https://www.bountysource.com/</a>
                         </p>
@@ -404,6 +600,7 @@
                     <p>
                         Chat. For GitHub.
                     </p>
+                    <img src="assets/logos/Gitter.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                     <p>
                         <a href="https://gitter.im/">https://gitter.im//</a>
                     </p>
@@ -417,8 +614,9 @@
                         <h2>Credits</h2>
                         <ul>
                             <li><a href="http://lab.hakim.se/reveal-js">reveal.js</a> - The HTML Presentation Framework</li>
-                            <li><a href="http://threejs.org">three.js</a> - Javascript 3D library</li>
-                            <li><a href="https://github.com/jeromeetienne/threex.planets">threex.planets.js</a> - Extension for planets in three.js</li>
+                            <li><a href="https://octodex.github.com/">GitHub Octodex</a> - The official Octocat gallery</li>
+                            <!--<li><a href="http://threejs.org">three.js</a> - Javascript 3D library</li>-->
+                            <!--<li><a href="https://github.com/jeromeetienne/threex.planets">threex.planets.js</a> - Extension for planets in three.js</li>-->
                         </ul>
                     </section>
                 </section>
@@ -452,8 +650,8 @@
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
-				//parallaxBackgroundImage: 'assets/starry_background.jpg',
-				//parallaxBackgroundSize: '2304px 1526px',
+				parallaxBackgroundImage: 'assets/starfield_paralax.jpg',
+				parallaxBackgroundSize: '7002px 1813px',
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
