@@ -79,8 +79,8 @@
 				<section>
                     <h2>Agenda</h2>
                     <ol>
-                        <li>Explaining <a href="https://github.com">GitHub</a> in under 5 minutes</li>
-                        <li>Intro to <a href="https://github.com/github/github-services">GitHub Services</a> & <a href="https://developer.github.com/v3/repos/hooks/">Webhooks</a></li>
+                        <li>Never heard of <a href="https://github.com">GitHub</a> anyone?</li>
+                        <li>Introducing GitHub <a href="https://developer.github.com/v3/repos/hooks/">Webhooks</a> &amp; <a href="https://github.com/github/github-services">Services Hooks</a></li>
                         <li>Universe of the polyglot <a href="https://github.com/bkimminich/kata-tcg">kata-tcg</a> project</li>
                         <li>Universe of the full-JS <a href="https://github.com/bkimminich/juice-shop">juice-shop</a> webapp</li>
                     </ol>
@@ -119,16 +119,66 @@
 
                 <section>
                     <section>
-                        <h2>GitHub Services</h2>
+                        <h2>Webhooks & Service Hooks</h2>
+                        <p>
+                            Individual &amp; Third Party Service Integration
+                        </p>
+                        <img src="assets/logos/GitHub-Mark-Light-120px-plus.png" width="200" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <a href="https://developer.github.com/webhooks/">https://developer.github.com/webhooks/</a>
+                        </p>
                     </section>
                     <section>
-                        ...
+                        <h3>Webhooks</h3>
+                        <ul>
+                            <li>Subscription to events on GitHub.com</li>
+                            <li>Used to integrate individual applications or tools</li>
+                            <li>Installation on <a href="https://developer.github.com/v3/orgs/hooks/">organization</a> or <a href="https://developer.github.com/v3/repos/hooks/">repository level</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Event Types &amp; Payloads</h3>
+                        <ul>
+                            <li>GitHub sends JSON payloads via <code>HTTP POST</code> only</li>
+                            <li>Types &amp; payloads mirror* the <a href="https://developer.github.com/v3/activity/events/types/">Event API</a></li>
+                        </ul>
+                        <img src="assets/screenshots/ghservice-events.png" width="600"/>
+                        <p>
+                            <small>*Some event types only exist for Webhooks, others are only for GitHub internal use. The <code>push</code> payload is the only one that is augmented with more details specifically for the Webhook API.</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Contents of a <code>push</code> event payload</h3>
+                        <img src="assets/screenshots/ghservice-push_payload.png" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <small>Payload additionally contains <code>repository</code>, <code>head_commit</code>, <code>pusher</code> and <code>sender</code> information.</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>179 pre-defined Service Hooks</h3>
+                        <img src="assets/service-tagcat.png" width="600" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <a href="https://github.com/github/github-services">https://github.com/github/github-services</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Webhooks vs. Service Hooks</h3>
+                        <ul>
+                            <li>Service Hooks can only be installed on repositories</li>
+                            <li>Only one Service Hook per integrator</li>
+                            <li>Supported events depend on service implementation</li>
+                            <li>Services come with their own unique configuration</li>
+                        </ul>
+                        <hr>
+                        <p>
+                            <small>GitHub recommends Webhooks for all new integrations using <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization. The existing <a href="https://github.com/github/github-services">github-service repository</a> is not accepting any new services.</small>
+                        </p>
                     </section>
                 </section>
 
                 <section>
                     <section>
-                        <h3>Example: Twitter</h3>
+                        <h3>Service Hook example: Twitter</h3>
                         <img src="assets/logos/Twitter_logo_white.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                     </section>
                     <section>
@@ -161,15 +211,6 @@
                     <section>
                         <h3>The Tweet composed and published by the GitHub Service</h3>
                         <img src="assets/screenshots/twitter07.png"/>
-                    </section>
-                </section>
-
-                <section>
-                    <section>
-                        <h3>Webhooks</h3>
-                    </section>
-                    <section>
-                        ...
                     </section>
                 </section>
 
