@@ -90,7 +90,7 @@
                     <h2>Agenda</h2>
                     <ol>
                         <li>A very brief introduction to <a href="https://github.com">GitHub</a></li>
-                        <li>GitHub <a href="https://developer.github.com/v3/repos/hooks/">Webhooks</a> &amp; <a href="https://github.com/github/github-services">Services Hooks</a></li>
+                        <li>GitHub <a href="https://developer.github.com/v3/repos/hooks/">WebHooks</a> &amp; <a href="https://github.com/github/github-services">Services Hooks</a></li>
                         <li>Universe of the polyglot <a href="https://github.com/bkimminich/kata-tcg">kata-tcg</a> project</li>
                         <li>Universe of the full-JS <a href="https://github.com/bkimminich/juice-shop">juice-shop</a> webapp</li>
                     </ol>
@@ -164,7 +164,7 @@
 
                 <section>
                     <section>
-                        <h2>Webhooks & Service Hooks</h2>
+                        <h2>WebHooks & Service Hooks</h2>
                         <p>
                             Individual &amp; Third Party Service Integration
                         </p>
@@ -174,7 +174,19 @@
                         </p>
                     </section>
                     <section>
-                        <h3>Webhooks</h3>
+                        <h3>Wait a moment! What are <a href="https://webhooks.pbworks.com/w/page/13385124/FrontPage">WebHooks</a>?</h3>
+                        <p>
+                            Simply put: <strong>User-defined <code>HTTP</code> callbacks.</strong> More specifically: <code>HTTP POST</code>s that occur when something happens. So basically a simple event-notification via <code>HTTP POST</code>.
+                        </p>
+                        <img src="assets/logos/webhooks.png" width="400" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <small>
+                                A web application implementing WebHooks will <code>POST</code> a message to a URL when certain things happen. When a web application enables users to register their own URLs, the users can then extend, customize, and integrate that application with their own custom extensions or even with other applications around the web. For the user, WebHooks are a way to receive valuable information when it happens, rather than continually polling for that data and receiving nothing valuable most of the time.
+                            </small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>WebHooks on GitHub</h3>
                         <ul>
                             <li>Subscription to events on GitHub.com</li>
                             <li>Used to integrate individual applications or tools</li>
@@ -189,7 +201,7 @@
                         </ul>
                         <img src="assets/screenshots/ghservice-events.png" width="600"/>
                         <p>
-                            <small>*Some event types only exist for Webhooks, others are only for GitHub internal use. The <code>push</code> payload is the only one that is augmented with more details specifically for the Webhook API.</small>
+                            <small>*Some event types only exist for WebHooks, others are only for GitHub internal use. The <code>push</code> payload is the only one that is augmented with more details specifically for the WebHook API.</small>
                         </p>
                     </section>
                     <section>
@@ -207,7 +219,7 @@
                         </p>
                     </section>
                     <section>
-                        <h3>Webhooks vs. Service Hooks</h3>
+                        <h3>WebHooks vs. Service Hooks</h3>
                         <ul>
                             <li>Service Hooks can only be installed on repositories</li>
                             <li>Only one Service Hook per integrator</li>
@@ -216,7 +228,7 @@
                         </ul>
                         <hr>
                         <p>
-                            <small>GitHub recommends Webhooks for all new integrations using <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization. The existing <a href="https://github.com/github/github-services">github-service repository</a> is not accepting any new services.</small>
+                            <small>GitHub recommends WebHooks for all new integrations using <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization. The existing <a href="https://github.com/github/github-services">github-service repository</a> is not accepting any new services.</small>
                         </p>
                     </section>
                 </section>
@@ -227,7 +239,7 @@
                         <img src="assets/logos/Twitter_logo_white.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                     </section>
                     <section>
-                        <h3>Webhooks &amp; Services menu item in repository Settings</h3>
+                        <h3>WebHooks &amp; Services menu item in repository Settings</h3>
                         <img src="assets/screenshots/twitter01.png"/>
                     </section>
                     <section>
@@ -355,7 +367,7 @@
                         <h3>On <code>push</code> receive sexy JSON* via Email</h3>
                         <img src="assets/screenshots/sns04.png"/>
                         <p>
-                            <small>If you're not so much into JSON I'm sure you'll find a Webhook subscriber that is...</small>
+                            <small>If you're not so much into JSON I'm sure you'll find a WebHook subscriber that is...</small>
                         </p>
                     </section>
                 </section>
