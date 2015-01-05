@@ -200,14 +200,14 @@
                             <li>GitHub sends JSON payloads via <code>HTTP POST</code> only</li>
                             <li>Types &amp; payloads mirror* the <a href="https://developer.github.com/v3/activity/events/types/">Event API</a></li>
                         </ul>
-                        <img src="assets/screenshots/ghservice-events.png" width="600"/>
+                        <img src="assets/screenshots/ghservices01.png" width="600"/>
                         <p>
                             <small>*Some event types only exist for WebHooks, others are only for GitHub internal use. The <code>push</code> payload is the only one that is augmented with more details specifically for the WebHook API.</small>
                         </p>
                     </section>
                     <section>
                         <h3>Contents of a <code>push</code> event payload</h3>
-                        <img src="assets/screenshots/ghservice-push_payload.png" style="background: none; border:none; box-shadow:none;"/>
+                        <img src="assets/screenshots/ghservices02.png" style="background: none; border:none; box-shadow:none;"/>
                         <p>
                             <small>Payload additionally contains <code>repository</code>, <code>head_commit</code>, <code>pusher</code> and <code>sender</code> information.</small>
                         </p>
