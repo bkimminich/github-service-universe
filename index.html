@@ -74,15 +74,11 @@
                         <p>
                             <strong>This is not a marketing talk.</strong> It is a compilation of personal experience gathered while working
                             on two of my own public repositories. I am neither affiliated with nor paid or otherwise reimbursed
-                            by GitHub* or any other company behind the products mentioned in this presentation.  No product evaluation or
+                            by GitHub or any other company behind the products mentioned in this presentation.  No product evaluation or
                             comparison study of any kind was conducted prior to choosing the services presented here.
                         </p>
                         <p>
                             Only services that are entirely <strong>free for open source</strong> projects are presented in this talk.
-                        </p>
-                        <hr>
-                        <p>
-                            <small>*I even bought the shirt I am wearing with my own money.</small>
                         </p>
                     </section>
                 </section>
@@ -180,11 +176,6 @@
                             Simply put: <strong>User-defined <code>HTTP</code> callbacks.</strong> More specifically: <code>HTTP POST</code>s that occur when something happens. So basically a simple event-notification via <code>HTTP POST</code>.
                         </p>
                         <img src="assets/logos/webhooks.png" width="400" style="background: none; border:none; box-shadow:none;"/>
-                        <p>
-                            <small>
-                                A web application implementing WebHooks will <code>POST</code> a message to a URL when certain things happen. When a web application enables users to register their own URLs, the users can then extend, customize, and integrate that application with their own custom extensions or even with other applications around the web. For the user, WebHooks are a way to receive valuable information when it happens, rather than continually polling for that data and receiving nothing valuable most of the time.
-                            </small>
-                        </p>
                     </section>
                     <section>
                         <h3>WebHooks on GitHub</h3>
@@ -615,10 +606,10 @@
                         <img src="assets/screenshots/saucelabs02.png"/>
                     </section>
                     <section>
-                        <h3>Setting up Saucelabs in Travis-CI config</h3>
+                        <h3>Triggering <a href="https://docs.saucelabs.com/ci-integrations/travis-ci/">Saucelabs from Travis CI</a></h3>
                         <img src="assets/screenshots/saucelabs03.png"/>
                         <p>
-                            <small>The secure tokens passed are <code>SAUCE_USERNAME</code> and <code>SAUCE_ACCESS_KEY</code>.</small>
+                            <small>The secure tokens are your <code>SAUCE_USERNAME</code> and <code>SAUCE_ACCESS_KEY</code>.</small>
                         </p>
                     </section>
                     <section>
@@ -650,7 +641,21 @@
                         </p>
                     </section>
                     <section>
-                        <h3>Setting up deployment to Nodejitsu in Travis-CI config</h3>
+                        <h3>Nodejistu instance of Juice Shop</h3>
+                        <p>
+                            <a href="http://juice-shop.jit.su/">http://juice-shop.jit.su/</a>
+                        </p>
+                        <img src="assets/screenshots/nodejitsu02.png"/>
+                        <p>
+                            <small>Open Source projects can <a href="http://opensource.nodejitsu.com/">apply for one free instance</a> on Nodejitsu.</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Application status dashboard</h3>
+                        <img src="assets/screenshots/nodejitsu03.png"/>
+                    </section>
+                    <section>
+                        <h3>Setting up deployment to Nodejitsu in Travis CI config</h3>
                         <img src="assets/screenshots/nodejitsu01.png"/>
                     </section>
                 </section>
