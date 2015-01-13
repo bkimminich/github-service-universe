@@ -467,11 +467,11 @@
                         <img src="assets/screenshots/coveralls08.png"/>
                     </section>
                     <section>
-                        <h3>Passing instrumented test results to Coveralls</h3>
+                        <h3>Passing test results to Coveralls</h3>
                         <img src="assets/screenshots/coveralls01.png"/>
                     </section>
                     <section>
-                        <h3>Setup NMA notification* on a coverage drop of  at least 2%</h3>
+                        <h3>Setup NMA email* on any coverage drop</h3>
                         <img src="assets/screenshots/coveralls06.png"/>
                         <p>
                             <small>For each new API key <a href="http://www.notifymyandroid.com/nmamail.jsp">NMA automatically creates an email address</a> <code>apikey@nmamail.net</code> that can be used for custom notifications.</small>
@@ -502,8 +502,11 @@
                         <img src="assets/screenshots/coverity02.png"/>
                     </section>
                     <section>
-                        <h3>Configuring Coverity scan on a separate branch</h3>
+                        <h3>Coverity scan setup on a separate branch</h3>
                         <img src="assets/screenshots/coverity01.png"/>
+                        <p>
+                            <small>Coverity <a href="https://scan.coverity.com/faq#frequency">limits the build submission frequency</a> to 1-3 builds/day (and 2-12 builds/week) depending the project's LOC.</small>
+                        </p>
                     </section>
                 </section>
 
@@ -533,8 +536,11 @@
                         <img src="assets/screenshots/versioneye02.png"/>
                     </section>
                     <section>
-                        <h3>Graph with all indirect dependencies of the JS implementation of Kata TCG</h3>
+                        <h3>Graph with all indirect dependencies</h3>
                         <img src="assets/screenshots/versioneye03.png"/>
+                        <p>
+                            <small><a href="https://www.versioneye.com/user/projects/544a3040c310f96cf00000fa/visual">This graph</a> shows all the dependencies brought into the JS implementation of kata-tcg by the used testing libraries!</small>
+                        </p>
                     </section>
                 </section>
 
@@ -609,11 +615,11 @@
                         <img src="assets/screenshots/codeclimate05.png"/>
                     </section>
                     <section>
-                        <h3>Merging coverage data and passing it to Codeclimate</h3>
+                        <h3>Send merged <a href="http://ltp.sourceforge.net/coverage/lcov.php">LCOV</a> data to Codeclimate</h3>
                         <img src="assets/screenshots/codeclimate06.png"/>
                     </section>
                     <section>
-                        <h3>Automatic issue creation on new quality issues</h3>
+                        <h3>Automatically open issues for code smells</h3>
                         <img src="assets/screenshots/codeclimate07.png"/>
                     </section>
                     <section>
@@ -641,7 +647,7 @@
                         <img src="assets/screenshots/saucelabs02.png"/>
                     </section>
                     <section>
-                        <h3>Live screencast of ongoing end-to-end test run</h3>
+                        <h3>Live screencast of ongoing e2e test run</h3>
                         <img src="assets/screenshots/saucelabs07.png"/>
                     </section>
                     <section>
@@ -660,8 +666,11 @@
                         <img src="assets/screenshots/saucelabs05.png"/>
                     </section>
                     <section>
-                        <h3>Programmatically setting the test outcome via Saucelabs API</h3>
+                        <h3>Programmatically setting test outcome</h3>
                         <img src="assets/screenshots/saucelabs06.png"/>
+                        <p>
+                            <small>Some adapters for Saucelabs automatically set the overall outcome of the test suite. For those that don't the outcome can still be set programmatically using the <a href="https://docs.saucelabs.com/reference/rest-api/">Saucelabs API</a>. If no outcome is set the test suite will finish in neutral <code>Finished</code> state.</small>
+                        </p>
                     </section>
                 </section>
 
@@ -694,7 +703,7 @@
                         <img src="assets/screenshots/nodejitsu03.png"/>
                     </section>
                     <section>
-                        <h3>Setting up deployment to Nodejitsu in Travis CI config</h3>
+                        <h3>Setting up deployment in <code>.travis.yml</code></h3>
                         <img src="assets/screenshots/nodejitsu01.png"/>
                         <p>
                             <small>By default only a <code>push</code> to the <code>master</code> branch triggers a deployment.</small>
@@ -745,7 +754,7 @@
                         <img src="assets/screenshots/gemnasium01.png"/>
                     </section>
                     <section>
-                        <h3>Outdated Jasmine development dependencies</h3>
+                        <h3>Outdated Jasmine test dependencies</h3>
                         <img src="assets/screenshots/gemnasium02.png"/>
                     </section>
                 </section>
@@ -761,7 +770,7 @@
                         </p>
                     </section>
                     <section>
-                        <h3>Dashboard with automatically discovered Node.js projects</h3>
+                        <h3>Automatically discovered Node.js projects</h3>
                         <img src="assets/screenshots/daviddm01.png"/>
                         <p>
                             <small>Unfortunately David-DM (v9.0.0) can only discover Node.js projects with a <code>package.json</code> in the repository root folder.</small>
@@ -832,7 +841,7 @@
                         </p>
                     </section>
                     <section>
-                        <h3>Project overview of issues to place bounties on</h3>
+                        <h3>Overview of issues to place bounties on</h3>
                         <img src="assets/screenshots/bountysource01.png"/>
                     </section>
                     <section>
