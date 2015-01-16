@@ -97,7 +97,7 @@
                     <section>
                         <h2>GitHub</h2>
                         <p>
-                            Collaborative Git repository hosting service.
+                            Collaborative <a href="http://en.wikipedia.org/wiki/Git_(software)">Git</a> repository hosting service.
                         </p>
                         <img src="assets/logos/GitHub-Mark-Light-120px-plus.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                         <p>
@@ -120,7 +120,7 @@
                     <section>
                         <h3>You are still...</h3>
                         <p>
-                            ...on Subversion?
+                            ...on <a href="http://en.wikipedia.org/wiki/Apache_Subversion">Subversion</a>?
                         </p>
                         <img src="assets/logos/mummytocat.gif" width="500"/>
                         <p>
@@ -130,7 +130,7 @@
                     <section>
                         <h3>Or even...</h3>
                         <p>
-                            ...CVS?
+                            ...<a href="http://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a>?
                         </p>
                         <img src="assets/logos/spectrocat.png" width="500"/>
                         <p>
@@ -138,21 +138,21 @@
                         </p>
                     </section>
                     <section>
-                        <h3>You might just have been...</h3>
+                        <h3>Not really...</h3>
                         <p>
-                            ...busy exploring other things?
+                            ...still <a href="http://en.wikipedia.org/wiki/Revision_Control_System">RCS</a> or <a href="http://en.wikipedia.org/wiki/Source_Code_Control_System">SCCS</a>?
                         </p>
-                        <img src="assets/logos/nyantocat.gif" width="500"/>
+                        <img src="assets/logos/grim-repo.jpg" width="500"/>
                         <p>
                             <small>Fact #4: GitHub (optionally) adds an issue tracker, wiki and project page to each repository.</small>
                         </p>
                     </section>
                     <section>
-                        <h3>You just realized...</h3>
+                        <h3>Or seriously...</h3>
                         <p>
-                            ...that you're in the wrong talk? <strong>D'oh!</strong>
+                            ...no version control system at all?
                         </p>
-                        <img src="assets/logos/homercat.png" width="500" style="background: rgba(255, 255, 255, 1);"/>
+                        <img src="assets/logos/nyantocat.gif" width="500"/>
                         <p>
                             <small>Fact #5: Repository statistics and social extras like Feeds, Followers &amp; Favorites are part of GitHub.</small>
                         </p>
@@ -239,7 +239,7 @@
                         <img src="assets/logos/Twitter_logo_white.png" width="200" style="background: none; border:none; box-shadow:none;"/>
                     </section>
                     <section>
-                        <h3>WebHooks &amp; Services menu item in repository Settings</h3>
+                        <h3>WebHooks &amp; Services in Settings menu</h3>
                         <img src="assets/screenshots/twitter01.png"/>
                     </section>
                     <section>
@@ -251,11 +251,11 @@
                         <img src="assets/screenshots/twitter03.png"/>
                     </section>
                     <section>
-                        <h3>Authorizing GitHub to tweet from a Twitter account</h3>
+                        <h3>Authorizing GitHub to send tweets</h3>
                         <img src="assets/screenshots/twitter04.png"/>
                     </section>
                     <section>
-                        <h3>Configuring message format and trigger branch</h3>
+                        <h3>Setting tweet format and trigger branch</h3>
                         <img src="assets/screenshots/twitter05.png"/>
                     </section>
                     <section>
@@ -266,7 +266,7 @@
                         </p>
                     </section>
                     <section>
-                        <h3>The Tweet composed and published by the GitHub Service</h3>
+                        <h3>The published <code>push</code> notification tweet</h3>
                         <img src="assets/screenshots/twitter07.png"/>
                     </section>
                 </section>
@@ -369,10 +369,10 @@
                         </p>
                     </section>
                     <section>
-                        <h3>On <code>push</code> receive sexy JSON* via Email</h3>
+                        <h3>Receiving sexy* JSON email on a <code>push</code></h3>
                         <img src="assets/screenshots/sns04.png"/>
                         <p>
-                            <small>If you're not so much into JSON I'm sure you'll find a WebHook subscriber that is...</small>
+                            <small>*If you're not so much into JSON I'm sure you'll find a WebHook subscriber that is...</small>
                         </p>
                     </section>
                 </section>
@@ -398,6 +398,29 @@
                     <section>
                         <h3>Detailed build log for failure analysis</h3>
                         <img src="assets/screenshots/travisci02.png"/>
+                    </section>
+                    <section>
+                        <h3>Build results per <code>pull</code> request</h3>
+                        <img src="assets/screenshots/travisci05.png"/>
+                    </section>
+                    <section>
+                        <h3>Build results per <code>commit</code> of a PR</h3>
+                        <img src="assets/screenshots/travisci06.png"/>
+                    </section>
+                    <section>
+                        <h3>Warning about ongoing PR build</h3>
+                        <img src="assets/screenshots/travisci07.png"/>
+                        <p>
+                            <small>Of course there is also a warning when the PR build failed.</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Watching the console of the running build</h3>
+                        <img src="assets/screenshots/travisci08.png"/>
+                    </section>
+                    <section>
+                        <h3>Merging PR with a warm <span style="color: #6cc644;">All is well</span>-feeling</h3>
+                        <img src="assets/screenshots/travisci09.png"/>
                     </section>
                     <section>
                         <h3>Simple setup of CI build for GitHub repos</h3>
@@ -440,11 +463,15 @@
                         <img src="assets/screenshots/coveralls05.png"/>
                     </section>
                     <section>
-                        <h3>Passing instrumented test results to Coveralls</h3>
+                        <h3>Integration into PR overview screen</h3>
+                        <img src="assets/screenshots/coveralls08.png"/>
+                    </section>
+                    <section>
+                        <h3>Passing test results to Coveralls</h3>
                         <img src="assets/screenshots/coveralls01.png"/>
                     </section>
                     <section>
-                        <h3>Setup NMA notification* on a coverage drop of  at least 2%</h3>
+                        <h3>Setup NMA email* on any coverage drop</h3>
                         <img src="assets/screenshots/coveralls06.png"/>
                         <p>
                             <small>For each new API key <a href="http://www.notifymyandroid.com/nmamail.jsp">NMA automatically creates an email address</a> <code>apikey@nmamail.net</code> that can be used for custom notifications.</small>
@@ -475,8 +502,11 @@
                         <img src="assets/screenshots/coverity02.png"/>
                     </section>
                     <section>
-                        <h3>Configuring Coverity scan on a separate branch</h3>
+                        <h3>Coverity scan setup on a separate branch</h3>
                         <img src="assets/screenshots/coverity01.png"/>
+                        <p>
+                            <small>Coverity <a href="https://scan.coverity.com/faq#frequency">limits the build submission frequency</a> to 1-3 builds/day (and 2-12 builds/week) depending the project's LOC.</small>
+                        </p>
                     </section>
                 </section>
 
@@ -506,8 +536,11 @@
                         <img src="assets/screenshots/versioneye02.png"/>
                     </section>
                     <section>
-                        <h3>Graph with all indirect dependencies of the JS implementation of Kata TCG</h3>
+                        <h3>Graph with all indirect dependencies</h3>
                         <img src="assets/screenshots/versioneye03.png"/>
+                        <p>
+                            <small><a href="https://www.versioneye.com/user/projects/544a3040c310f96cf00000fa/visual">This graph</a> shows all the dependencies brought into the JS implementation of kata-tcg by the used testing libraries!</small>
+                        </p>
                     </section>
                 </section>
 
@@ -582,11 +615,11 @@
                         <img src="assets/screenshots/codeclimate05.png"/>
                     </section>
                     <section>
-                        <h3>Merging coverage data and passing it to Codeclimate</h3>
+                        <h3>Send merged <a href="http://ltp.sourceforge.net/coverage/lcov.php">LCOV</a> data to Codeclimate</h3>
                         <img src="assets/screenshots/codeclimate06.png"/>
                     </section>
                     <section>
-                        <h3>Automatic issue creation on new quality issues</h3>
+                        <h3>Automatically open issues for code smells</h3>
                         <img src="assets/screenshots/codeclimate07.png"/>
                     </section>
                     <section>
@@ -614,6 +647,10 @@
                         <img src="assets/screenshots/saucelabs02.png"/>
                     </section>
                     <section>
+                        <h3>Live screencast of ongoing e2e test run</h3>
+                        <img src="assets/screenshots/saucelabs07.png"/>
+                    </section>
+                    <section>
                         <h3>Triggering <a href="https://docs.saucelabs.com/ci-integrations/travis-ci/">Saucelabs from Travis CI</a></h3>
                         <img src="assets/screenshots/saucelabs03.png"/>
                         <p>
@@ -629,8 +666,11 @@
                         <img src="assets/screenshots/saucelabs05.png"/>
                     </section>
                     <section>
-                        <h3>Programmatically setting the test outcome via Saucelabs API</h3>
+                        <h3>Programmatically setting test outcome</h3>
                         <img src="assets/screenshots/saucelabs06.png"/>
+                        <p>
+                            <small>Some adapters for Saucelabs automatically set the overall outcome of the test suite. For those that don't the outcome can still be set programmatically using the <a href="https://docs.saucelabs.com/reference/rest-api/">Saucelabs API</a>. If no outcome is set the test suite will finish in neutral <code>Finished</code> state.</small>
+                        </p>
                     </section>
                 </section>
 
@@ -663,8 +703,11 @@
                         <img src="assets/screenshots/nodejitsu03.png"/>
                     </section>
                     <section>
-                        <h3>Setting up deployment to Nodejitsu in Travis CI config</h3>
+                        <h3>Setting up deployment in <code>.travis.yml</code></h3>
                         <img src="assets/screenshots/nodejitsu01.png"/>
+                        <p>
+                            <small>By default only a <code>push</code> to the <code>master</code> branch triggers a deployment.</small>
+                        </p>
                     </section>
                 </section>
                 <section>
@@ -711,7 +754,7 @@
                         <img src="assets/screenshots/gemnasium01.png"/>
                     </section>
                     <section>
-                        <h3>Outdated Jasmine development dependencies</h3>
+                        <h3>Outdated Jasmine test dependencies</h3>
                         <img src="assets/screenshots/gemnasium02.png"/>
                     </section>
                 </section>
@@ -727,7 +770,7 @@
                         </p>
                     </section>
                     <section>
-                        <h3>Dashboard with automatically discovered Node.js projects</h3>
+                        <h3>Automatically discovered Node.js projects</h3>
                         <img src="assets/screenshots/daviddm01.png"/>
                         <p>
                             <small>Unfortunately David-DM (v9.0.0) can only discover Node.js projects with a <code>package.json</code> in the repository root folder.</small>
@@ -798,7 +841,7 @@
                         </p>
                     </section>
                     <section>
-                        <h3>Project overview of issues to place bounties on</h3>
+                        <h3>Overview of issues to place bounties on</h3>
                         <img src="assets/screenshots/bountysource01.png"/>
                     </section>
                     <section>
@@ -815,14 +858,34 @@
                     </section>
                 </section>
                 <section>
+                    <section>
                     <h3>Gitter</h3>
-                    <p>
-                        Chat. For GitHub.
-                    </p>
-                    <img src="assets/logos/Gitter.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                    <p>
-                        <a href="https://gitter.im/">https://gitter.im//</a>
-                    </p>
+                        <p>
+                            Chat. For GitHub.
+                        </p>
+                        <img src="assets/logos/Gitter.png" width="200" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <a href="https://gitter.im/">https://gitter.im/</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>The official <a href="https://gitter.im/bkimminich/juice-shop">Gitter chatroom of Juice-Shop</a></h3>
+                        <img src="assets/screenshots/gitter01.png"/>
+                        <p>
+                            <small>Disclaimer: Chatroom might appear even more desolated on screenshot than in reality.</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Activity sidebar populated via WebHooks</h3>
+                        <img src="assets/screenshots/gitter02.png"/>
+                    </section>
+                    <section>
+                        <h3>GitHub-side of the Gitter-WebHook</h3>
+                        <img src="assets/screenshots/gitter03.png"/>
+                        <p>
+                            <small>With granted repository access Gitter will setup its WebHook on GitHub automatically.</small>
+                        </p>
+                    </section>
                 </section>
 
                 <section>
