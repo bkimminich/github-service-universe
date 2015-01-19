@@ -88,8 +88,8 @@
                     <ol>
                         <li>A very brief introduction to <a href="https://github.com">GitHub</a></li>
                         <li>GitHub <a href="https://developer.github.com/v3/repos/hooks/">WebHooks</a> &amp; <a href="https://github.com/github/github-services">Services Hooks</a></li>
-                        <li>Universe of the polyglot <a href="https://github.com/bkimminich/kata-tcg">kata-tcg</a> project</li>
-                        <li>Universe of the full-JS <a href="https://github.com/bkimminich/juice-shop">juice-shop</a> webapp</li>
+                        <li>Showcase Universes  <a href="https://github.com/bkimminich/kata-tcg">kata-tcg</a> &amp; <a href="https://github.com/bkimminich/juice-shop">juice-shop</a></li>
+                        <li>Fifteen useful GitHub Services for your projects</li>
                     </ol>
 				</section>
 
@@ -165,9 +165,12 @@
                         <p>
                             Individual &amp; Third Party Service Integration
                         </p>
-                        <img src="assets/logos/GitHub-Mark-Light-120px-plus.png" width="200" style="background: none; border:none; box-shadow:none;"/>
+                        <img src="assets/service-tagcat.png" width="400" style="background: none; border:none; box-shadow:none;"/>
                         <p>
-                            <a href="https://developer.github.com/webhooks/">https://developer.github.com/webhooks/</a>
+                            <a href="https://developer.github.com/webhooks">https://developer.github.com/webhooks</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/github/github-services">https://github.com/github/github-services</a>
                         </p>
                     </section>
                     <section>
@@ -186,53 +189,51 @@
                             <li>Subscription to events on GitHub.com</li>
                             <li>Used to integrate individual applications or tools</li>
                             <li>Installation on <a href="https://developer.github.com/v3/orgs/hooks/">organization</a> or <a href="https://developer.github.com/v3/repos/hooks/">repository level</a></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3>Event Types &amp; Payloads</h3>
-                        <ul>
-                            <li>GitHub sends JSON payloads via <code>HTTP POST</code> only</li>
                             <li>Types &amp; payloads mirror* the <a href="https://developer.github.com/v3/activity/events/types/">Event API</a></li>
                         </ul>
-                        <img src="assets/screenshots/ghservices01.png" width="600"/>
+                        <p></p>
+                        <div id="webHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
                         <p>
-                            <small>*Some event types only exist for WebHooks, others are only for GitHub internal use. The <code>push</code> payload is the only one that is augmented with more details specifically for the WebHook API.</small>
+                            <small>
+                                *Event types <code>commit_comment</code>, <code>create</code>, <code>delete</code>, <code>fork</code>, <code>gollum</code>, <code>issue_comment</code>, <code>issues</code>, <code>member</code>, <code>page_build</code>, <code>public</code>, <code>pull_request</code>, <code>push</code>, <code>watch</code>, <code>pull_request_review_comment</code>, <code>status</code>, <code>release</code>, <code>deployment</code> and <code>deployment_status</code> are supported on repository-level.
+                                On organization-level <code>membership</code>, <code>repository</code> and <code>team_add</code> are available.
+                            </small>
                         </p>
                     </section>
                     <section>
-                        <h3>Contents of a <code>push</code> event payload</h3>
-                        <img src="assets/screenshots/ghservices02.png" style="background: none; border:none; box-shadow:none;"/>
-                        <p>
-                            <small>Payload additionally contains <code>repository</code>, <code>head_commit</code>, <code>pusher</code> and <code>sender</code> information.</small>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>179 pre-defined Service Hooks</h3>
-                        <img src="assets/service-tagcat.png" width="600" style="background: none; border:none; box-shadow:none;"/>
-                        <p>
-                            <a href="https://github.com/github/github-services">https://github.com/github/github-services</a>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>WebHooks vs. Service Hooks</h3>
+                        <h3>Service Hooks on GitHub</h3>
                         <ul>
                             <li>Service Hooks can only be installed on repositories</li>
                             <li>Only one Service Hook per integrator</li>
                             <li>Supported events depend on service implementation</li>
                             <li>Services come with their own unique configuration</li>
                         </ul>
-                        <hr>
+                        <p></p>
+                            <div id="serviceHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
+                        <p></p>
                         <p>
                             <small>GitHub recommends WebHooks for all new integrations using <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization. The existing <a href="https://github.com/github/github-services">github-service repository</a> is not accepting any new services.</small>
                         </p>
                     </section>
                     <section>
                         <h3>Account Level Integration</h3>
-                        <p>
-                            Some 3rd party services integrate even more closely with GitHub by demanding account level access to public/private repositories.
-                            These do not require any manual setup by the user on the GitHub page. Instead they are configured behind the scenes by the service
-                            provider or manually in the 3rd party application itself.
-                        </p>
+                        <ul>
+                            <li>Close integration with GitHub by demanding repo or account access</li>
+                            <li>Do not require any manual setup by the user on the GitHub page</li>
+                            <li>Configured by the service provider via its own user interface</li>
+                        </ul>
+                        <p></p>
+                        <div id="accountIntegrationDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
+                    </section>
+                    <section>
+                        <h3>Integration Chain</h3>
+                        <ul>
+                            <li>3rd party does not integrate directly with GitHub</li>
+                            <li>Instead integration with APIs of other service providers</li>
+                            <li>Very useful in Continuous Integration context. Example:</li>
+                        </ul>
+                        <p></p>
+                        <div id="serviceChainDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
                     </section>
                 </section>
 
@@ -275,6 +276,9 @@
                 </section>
 
                 <section>
+                    <h2>The Showcase Universes</h2>
+                </section>
+                <section>
                     <section>
                         <h2>Kata TCG</h2>
                         <p>
@@ -307,7 +311,45 @@
                         <img src="assets/logos/gradle.png" style="background: none; border:none; box-shadow:none;"/>
                     </section>
                 </section>
+                <section>
+                    <section>
+                        <h2>Juice Shop</h2>
+                        <p>
+                            An intentionally insecure RIA suitable for pentesting and security awareness trainings written in pure Javascript
+                        </p>
+                        <img src="assets/logos/juiceshop_logo_128px.jpg"/>
+                        <p>
+                            <a href="http://bkimminich.github.io/juice-shop/">http://bkimminich.github.io/juice-shop/</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Technology Stack</h3>
+                        <img src="assets/logos/bootstrap-solid.svg" height="150" style="background: none; border:none; box-shadow:none;"/>
+                        <img src="assets/logos/AngularJS-Shield-medium.png" height="150" style="background: none; border:none; box-shadow:none;"/>
+                        <br>
+                        <img src="assets/logos/nodejs.svg" height="150" style="background: none; border:none; box-shadow:none;"/>
+                        <img src="assets/logos/express.png" height="100" style="background: none; border:none; box-shadow:none;"/>
+                        <br>
+                        <img src="assets/logos/SQLite370.svg.png" height="150" style="background: none; border:none; box-shadow:none;"/>
+                        <img src="assets/logos/sequelize.png" height="150" style="background: none; border:none; box-shadow:none;"/>
+                    </section>
+                    <section>
+                        <h3>Build Setup</h3>
+                        <img src="assets/logos/Bower-logo.svg.png" height="100" style="background: none; border:none; box-shadow:none;"/>
+                        <img src="assets/logos/npm-logo.png" height="100" style="background: none; border:none; box-shadow:none;"/>
+                        <img src="assets/logos/grunt-logo-no-wordmark.png" height="100" style="background: none; border:none; box-shadow:none;"/>
+                        <br>
+                        <img src="assets/logos/protractor-favicon64.png" height="100" style="background: none; border:none; box-shadow:none;"/>
+                        <img src="assets/logos/karma.png" height="100" style="background: none; border:none; box-shadow:none;"/>
+                        <br>
+                        <img src="assets/logos/jasmine-horizontal.svg" height="100" style="background: none; border:none; box-shadow:none;"/>
+                        <img src="assets/logos/logo-frisby.png" height="100" style="background: none; border:none; box-shadow:none;"/>
+                    </section>
+                </section>
 
+                <section>
+                    <h2>Fifteen useful GitHub Services for your projects</h2>
+                </section>
                 <section>
                     <h2>Notifications</h2>
                 </section>
@@ -426,17 +468,44 @@
                         <img src="assets/screenshots/travisci09.png"/>
                     </section>
                     <section>
-                        <h3>Simple setup of CI build for GitHub repos</h3>
-                        <img src="assets/screenshots/travisci03.png"/>
-                    </section>
-                    <section>
                         <h3>Build configuration via <code>.travis.yml</code> file</h3>
                         <img src="assets/screenshots/travisci04.png"/>
                     </section>
                 </section>
+                <section>
+                    <section>
+                        <h3>Saucelabs</h3>
+                        <p>
+                            Automated cross-browser and mobile testing in the cloud for CI.
+                        </p>
+                        <img src="assets/logos/saucelabs.jpg" width="200" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <a href="https://saucelabs.com/">https://saucelabs.com/</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>List of last test run results for juice-shop</h3>
+                        <img src="assets/screenshots/saucelabs01.png"/>
+                    </section>
+                    <section>
+                        <h3>Overview of the last failed test run</h3>
+                        <img src="assets/screenshots/saucelabs02.png"/>
+                    </section>
+                    <section>
+                        <h3>Live screencast of ongoing e2e test run</h3>
+                        <img src="assets/screenshots/saucelabs07.png"/>
+                    </section>
+                    <section>
+                        <h3>Triggering <a href="https://docs.saucelabs.com/ci-integrations/travis-ci/">Saucelabs from Travis CI</a></h3>
+                        <img src="assets/screenshots/saucelabs03.png"/>
+                        <p>
+                            <small>The secure tokens are your <code>SAUCE_USERNAME</code> and <code>SAUCE_ACCESS_KEY</code>.</small>
+                        </p>
+                    </section>
+                </section>
 
                 <section>
-                    <h2>Quality Assurance I</h2>
+                    <h2>Quality Assurance</h2>
                 </section>
                 <section>
                     <section>
@@ -512,9 +581,49 @@
                         </p>
                     </section>
                 </section>
+                <section>
+                    <section>
+                        <h3>Codeclimate</h3>
+                        <p>
+                            Automated code review for Ruby, JS, and PHP providing feedback on code quality and test coverage.
+                        </p>
+                        <img src="assets/logos/codeclimate.png" width="200" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <a href="https://codeclimate.com/">https://codeclimate.com/</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Quality overview in Codeclimate Feed</h3>
+                        <img src="assets/screenshots/codeclimate01.png"/>
+                    </section>
+                    <section>
+                        <h3>Quality metrics and test coverage per file</h3>
+                        <img src="assets/screenshots/codeclimate02.png"/>
+                    </section>
+                    <section>
+                        <h3>Code smells identified by Codeclimate</h3>
+                        <img src="assets/screenshots/codeclimate03.png"/>
+                    </section>
+                    <section>
+                        <h3>Coverage details show a missed function</h3>
+                        <img src="assets/screenshots/codeclimate05.png"/>
+                    </section>
+                    <section>
+                        <h3>Send merged <a href="http://ltp.sourceforge.net/coverage/lcov.php">LCOV</a> data to Codeclimate</h3>
+                        <img src="assets/screenshots/codeclimate06.png"/>
+                    </section>
+                    <section>
+                        <h3>Automatically open issues for code smells</h3>
+                        <img src="assets/screenshots/codeclimate07.png"/>
+                    </section>
+                    <section>
+                        <h3>Refactoring issue created by Codeclimate</h3>
+                        <img src="assets/screenshots/codeclimate08.png"/>
+                    </section>
+                </section>
 
                 <section>
-                    <h2>Dependency Management I</h2>
+                    <h2>Dependency Management</h2>
                 </section>
                 <section>
                     <section>
@@ -545,201 +654,6 @@
                             <small><a href="https://www.versioneye.com/user/projects/544a3040c310f96cf00000fa/visual">This graph</a> shows all the dependencies brought into the JS implementation of kata-tcg by the used testing libraries!</small>
                         </p>
                     </section>
-                </section>
-
-                <section>
-                    <section>
-                        <h2>Juice Shop</h2>
-                        <p>
-                            An intentionally insecure RIA suitable for pentesting and security awareness trainings written in pure Javascript
-                        </p>
-                        <img src="assets/logos/juiceshop_logo_128px.jpg"/>
-                        <p>
-                            <a href="http://bkimminich.github.io/juice-shop/">http://bkimminich.github.io/juice-shop/</a>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>Technology Stack</h3>
-                        <img src="assets/logos/bootstrap-solid.svg" height="150" style="background: none; border:none; box-shadow:none;"/>
-                        <img src="assets/logos/AngularJS-Shield-medium.png" height="150" style="background: none; border:none; box-shadow:none;"/>
-                        <br>
-                        <img src="assets/logos/nodejs.svg" height="150" style="background: none; border:none; box-shadow:none;"/>
-                        <img src="assets/logos/express.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                        <br>
-                        <img src="assets/logos/SQLite370.svg.png" height="150" style="background: none; border:none; box-shadow:none;"/>
-                        <img src="assets/logos/sequelize.png" height="150" style="background: none; border:none; box-shadow:none;"/>
-                    </section>
-                    <section>
-                        <h3>Build Setup</h3>
-                        <img src="assets/logos/Bower-logo.svg.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                        <img src="assets/logos/npm-logo.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                        <img src="assets/logos/grunt-logo-no-wordmark.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                        <br>
-                        <img src="assets/logos/protractor-favicon64.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                        <img src="assets/logos/karma.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                        <br>
-                        <img src="assets/logos/jasmine-horizontal.svg" height="100" style="background: none; border:none; box-shadow:none;"/>
-                        <img src="assets/logos/logo-frisby.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                    </section>
-                </section>
-
-                <section>
-                    <h2>Quality Assurance II</h2>
-                </section>
-                <section>
-                    <section>
-                        <h3>Codeclimate</h3>
-                        <p>
-                            Automated code review for Ruby, JS, and PHP providing feedback on code quality and test coverage.
-                        </p>
-                        <img src="assets/logos/codeclimate.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                        <p>
-                            <a href="https://codeclimate.com/">https://codeclimate.com/</a>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>Quality overview in Codeclimate Feed</h3>
-                        <img src="assets/screenshots/codeclimate01.png"/>
-                    </section>
-                    <section>
-                        <h3>Quality metrics and test coverage per file</h3>
-                        <img src="assets/screenshots/codeclimate02.png"/>
-                    </section>
-                    <section>
-                        <h3>Code smells identified by Codeclimate</h3>
-                        <img src="assets/screenshots/codeclimate03.png"/>
-                    </section>
-                    <section>
-                        <h3>Quality trend of the <a href="https://codeclimate.com/github/bkimminich/juice-shop/trends">juice-shop</a> repository</h3>
-                        <img src="assets/screenshots/codeclimate04.png"/>
-                    </section>
-                    <section>
-                        <h3>Coverage details show a missed function</h3>
-                        <img src="assets/screenshots/codeclimate05.png"/>
-                    </section>
-                    <section>
-                        <h3>Send merged <a href="http://ltp.sourceforge.net/coverage/lcov.php">LCOV</a> data to Codeclimate</h3>
-                        <img src="assets/screenshots/codeclimate06.png"/>
-                    </section>
-                    <section>
-                        <h3>Automatically open issues for code smells</h3>
-                        <img src="assets/screenshots/codeclimate07.png"/>
-                    </section>
-                    <section>
-                        <h3>Refactoring issue created by Codeclimate</h3>
-                        <img src="assets/screenshots/codeclimate08.png"/>
-                    </section>
-                </section>
-                <section>
-                    <section>
-                        <h3>Saucelabs</h3>
-                        <p>
-                            Automated cross-browser and mobile testing in the cloud for CI.
-                        </p>
-                        <img src="assets/logos/saucelabs.jpg" width="200" style="background: none; border:none; box-shadow:none;"/>
-                        <p>
-                            <a href="https://saucelabs.com/">https://saucelabs.com/</a>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>List of last test run results for juice-shop</h3>
-                        <img src="assets/screenshots/saucelabs01.png"/>
-                    </section>
-                    <section>
-                        <h3>Overview of the last failed test run</h3>
-                        <img src="assets/screenshots/saucelabs02.png"/>
-                    </section>
-                    <section>
-                        <h3>Live screencast of ongoing e2e test run</h3>
-                        <img src="assets/screenshots/saucelabs07.png"/>
-                    </section>
-                    <section>
-                        <h3>Triggering <a href="https://docs.saucelabs.com/ci-integrations/travis-ci/">Saucelabs from Travis CI</a></h3>
-                        <img src="assets/screenshots/saucelabs03.png"/>
-                        <p>
-                            <small>The secure tokens are your <code>SAUCE_USERNAME</code> and <code>SAUCE_ACCESS_KEY</code>.</small>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>Dedicated Unit Test config for Saucelabs</h3>
-                        <img src="assets/screenshots/saucelabs04.png"/>
-                    </section>
-                    <section>
-                        <h3>Dedicated E2E Test config for Saucelabs</h3>
-                        <img src="assets/screenshots/saucelabs05.png"/>
-                    </section>
-                    <section>
-                        <h3>Programmatically setting test outcome</h3>
-                        <img src="assets/screenshots/saucelabs06.png"/>
-                        <p>
-                            <small>Some adapters for Saucelabs automatically set the overall outcome of the test suite. For those that don't the outcome can still be set programmatically using the <a href="https://docs.saucelabs.com/reference/rest-api/">Saucelabs API</a>. If no outcome is set the test suite will finish in neutral <code>Finished</code> state.</small>
-                        </p>
-                    </section>
-                </section>
-
-                <section>
-                    <h2>Continuous Deployment</h2>
-                </section>
-                <section>
-                    <section>
-                        <h3>Nodejitsu</h3>
-                        <p>
-                            Reliable, scalable, and user-friendly Platform-as-a-Service for <a href="http://nodejs.org/">node.js</a> apps.
-                        </p>
-                        <img src="assets/logos/nodejitsu-transparent.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                        <p>
-                            <a href="https://www.nodejitsu.com/">https://www.nodejitsu.com/</a>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>Nodejistu instance of Juice Shop</h3>
-                        <p>
-                            <a href="http://juice-shop.jit.su/">http://juice-shop.jit.su/</a>
-                        </p>
-                        <img src="assets/screenshots/nodejitsu02.png"/>
-                        <p>
-                            <small>Open Source projects can <a href="http://opensource.nodejitsu.com/">apply for one free instance</a> on Nodejitsu.</small>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>Application status dashboard</h3>
-                        <img src="assets/screenshots/nodejitsu03.png"/>
-                    </section>
-                    <section>
-                        <h3>Setting up deployment in <code>.travis.yml</code></h3>
-                        <img src="assets/screenshots/nodejitsu01.png"/>
-                        <p>
-                            <small>By default only a <code>push</code> to the <code>master</code> branch triggers a deployment.</small>
-                        </p>
-                    </section>
-                </section>
-                <section>
-                    <section>
-                        <h3>Docker</h3>
-                        <p>
-                            Open platform for distributed applications for developers and sysadmins.
-                        </p>
-                        <img src="assets/logos/docker.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                        <p>
-                            <a href="https://docker.com/">https://docker.com/</a>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>Autobuild Repository on <a href="https://hub.docker.com/">Docker Hub</a></h3>
-                        <img src="assets/screenshots/docker01.png"/>
-                    </section>
-                    <section>
-                        <h3>Activated Docker Service Hook on GitHub</h3>
-                        <img src="assets/screenshots/docker02.png"/>
-                    </section>
-                    <section>
-                        <h3>The <code>Dockerfile</code> of Juice Shop</h3>
-                        <img src="assets/screenshots/docker03.png"/>
-                    </section>
-                </section>
-
-                <section>
-                    <h2>Dependency Management II</h2>
                 </section>
                 <section>
                     <section>
@@ -786,9 +700,66 @@
                             <small>A module without security warnings might still contain undiscovered vulnerabilities! On the other hand proven vulnerabilities of a module might be irrelevant in the context it is used in.</small>
                         </p>
                     </section>
+                </section>
+
+                <section>
+                    <h2>Continuous Deployment</h2>
+                </section>
+                <section>
                     <section>
-                        <h3>Changelog of outdated <a href="https://www.npmjs.com/package/express-jwt">express-jwt</a> lib</h3>
-                        <img src="assets/screenshots/daviddm03.png"/>
+                        <h3>Nodejitsu</h3>
+                        <p>
+                            Reliable, scalable, and user-friendly Platform-as-a-Service for <a href="http://nodejs.org/">node.js</a> apps.
+                        </p>
+                        <img src="assets/logos/nodejitsu-transparent.png" width="200" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <a href="https://www.nodejitsu.com/">https://www.nodejitsu.com/</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Nodejistu instance of Juice Shop</h3>
+                        <p>
+                            <a href="http://juice-shop.jit.su/">http://juice-shop.jit.su/</a>
+                        </p>
+                        <img src="assets/screenshots/nodejitsu02.png"/>
+                        <p>
+                            <small>Open Source projects can <a href="http://opensource.nodejitsu.com/">apply for one free instance</a> on Nodejitsu.</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Application status dashboard</h3>
+                        <img src="assets/screenshots/nodejitsu03.png"/>
+                    </section>
+                    <section>
+                        <h3>Setting up deployment in <code>.travis.yml</code></h3>
+                        <img src="assets/screenshots/nodejitsu01.png"/>
+                        <p>
+                            <small>By default only a successful build of the <code>master</code> branch triggers a deployment.</small>
+                        </p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Docker</h3>
+                        <p>
+                            Open platform for distributed applications for developers and sysadmins.
+                        </p>
+                        <img src="assets/logos/docker.png" width="200" style="background: none; border:none; box-shadow:none;"/>
+                        <p>
+                            <a href="https://docker.com/">https://docker.com/</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Autobuild Repository on <a href="https://hub.docker.com/">Docker Hub</a></h3>
+                        <img src="assets/screenshots/docker01.png"/>
+                    </section>
+                    <section>
+                        <h3>Activated Docker Service Hook on GitHub</h3>
+                        <img src="assets/screenshots/docker02.png"/>
+                    </section>
+                    <section>
+                        <h3>The <code>Dockerfile</code> of Juice Shop</h3>
+                        <img src="assets/screenshots/docker03.png"/>
                     </section>
                 </section>
 
@@ -817,10 +788,6 @@
                     <section>
                         <h3>Simple creation and tagging of story cards</h3>
                         <img src="assets/screenshots/huboard03.png"/>
-                    </section>
-                    <section>
-                        <h3>Status changes synced via issue labels</h3>
-                        <img src="assets/screenshots/huboard04.png"/>
                     </section>
                     <section>
                         <h3>Authorizing access to GitHub repos</h3>
@@ -902,9 +869,8 @@
                         <h2>Credits</h2>
                         <ul>
                             <li><a href="http://lab.hakim.se/reveal-js">reveal.js</a> - The HTML Presentation Framework</li>
+                            <li><a href="http://bramp.github.io/js-sequence-diagrams/">js-sequence-diagrams</a> - Turns text into UML sequence diagrams</li>
                             <li><a href="https://octodex.github.com/">GitHub Octodex</a> - The official Octocat gallery</li>
-                            <!--<li><a href="http://threejs.org">three.js</a> - Javascript 3D library</li>-->
-                            <!--<li><a href="https://github.com/jeromeetienne/threex.planets">threex.planets.js</a> - Extension for planets in three.js</li>-->
                         </ul>
                     </section>
                 </section>
@@ -953,6 +919,62 @@
 			});
 
 		</script>
+
+        <script src="js/raphael-min.js"></script>
+        <script src="js/underscore-min.js"></script>
+        <script src="js/sequence-diagram-min.js"></script>
+
+        <script>
+            var webHooksDiagram = Diagram.parse(
+                    "participant User\n" +
+                    "Provider->GitHub: Register OAuth Application\n" +
+                    "GitHub-->Provider: Client ID & Secret\n" +
+                    "User->Provider: Request WebHook URI\n" +
+                    "Provider-->User:\n" +
+                    "User->GitHub: Add WebHook\n" +
+                    "GitHub->Provider: Call WebHook\n" +
+                    "Provider-->User: Provide Service\n"
+            );
+            webHooksDiagram.drawSVG("webHooksDiagram", {theme: 'hand'});
+
+            var serviceHooksDiagram = Diagram.parse(
+                    "participant User\n" +
+                    "Provider->GitHub: Develop Service Hook\n" +
+                    "User->Provider: Request Access Key (optional)\n" +
+                    "Provider-->User:\n" +
+                    "User->GitHub: Configure Service Hook\n" +
+                    "GitHub->Provider: Call Service Hook\n" +
+                    "Provider-->User: Provide Service\n"
+            );
+            serviceHooksDiagram.drawSVG("serviceHooksDiagram", {theme: 'hand'});
+
+            var accountIntegrationDiagram = Diagram.parse(
+                    "participant User\n" +
+                    "User->Provider: Configure Service\n" +
+                    "Provider->GitHub: Request Access\n" +
+                    "GitHub->User:\n" +
+                    "User-->GitHub:\n" +
+                    "GitHub-->Provider: Grant Access\n" +
+                    "Provider->GitHub: Configure Service- or WebHook\n" +
+                    "GitHub->Provider: Call Hook\n" +
+                    "Provider-->User: Provide Service\n"
+            );
+            accountIntegrationDiagram.drawSVG("accountIntegrationDiagram", {theme: 'hand'});
+
+            var serviceChainDiagram = Diagram.parse(
+                    "participant User\n" +
+                    "participant PAAS Provider\n" +
+                    "participant QA Provider\n" +
+                    "participant CI Provider\n" +
+                    "GitHub->CI Provider: Trigger Build\n" +
+                    "CI Provider->QA Provider: Static Analysis\n" +
+                    "QA Provider-->User: Send Results\n" +
+                    "CI Provider->PAAS Provider: Deploy\n" +
+                    "PAAS Provider-->User: Running Instance\n"
+            );
+            serviceChainDiagram.drawSVG("serviceChainDiagram", {theme: 'hand'});
+
+        </script>
 
 	</body>
 </html>
