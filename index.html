@@ -32,10 +32,6 @@
 			}
 		</script>
 
-        <script src="js/raphael-min.js"></script>
-        <script src="js/underscore-min.js"></script>
-        <script src="js/sequence-diagram-min.js"></script>
-
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -194,19 +190,6 @@
                         <p>
                             <div id="webHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
                         </p>
-                        <script>
-                            var webHooksDiagram = Diagram.parse(
-                                    "participant User\n" +
-                                    "Provider->GitHub: Register OAuth Application\n" +
-                                    "GitHub-->Provider: Client ID & Secret\n" +
-                                    "User->Provider: Request WebHook URI\n" +
-                                    "Provider-->User:\n" +
-                                    "User->GitHub: Add WebHook\n" +
-                                    "GitHub->Provider: Call WebHook\n" +
-                                    "Provider-->User: Provide Service\n"
-                            );
-                            webHooksDiagram.drawSVG("webHooksDiagram", {theme: 'hand'});
-                        </script>
                     </section>
                     <section>
                         <h3>Event Types &amp; Payloads</h3>
@@ -244,18 +227,6 @@
                         <p>
                             <div id="serviceHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
                         </p>
-                        <script>
-                            var serviceHooksDiagram = Diagram.parse(
-                                    "participant User\n" +
-                                    "Provider->GitHub: Develop Service Hook\n" +
-                                    "User->Provider: Request Access Key (optional)\n" +
-                                    "Provider-->User:\n" +
-                                    "User->GitHub: Configure Service Hook\n" +
-                                    "GitHub->Provider: Call Service Hook\n" +
-                                    "Provider-->User: Provide Service\n"
-                            );
-                            serviceHooksDiagram.drawSVG("serviceHooksDiagram", {theme: 'hand'});
-                        </script>
                         <p>
                             <small>GitHub recommends WebHooks for all new integrations using <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization. The existing <a href="https://github.com/github/github-services">github-service repository</a> is not accepting any new services.</small>
                         </p>
@@ -268,22 +239,8 @@
                             provider or manually in the 3rd party application itself.
                         </p>
                         <p>
-                        <div id="accountIntegrationDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
+                            <div id="accountIntegrationDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
                         </p>
-                        <script>
-                            var accountIntegrationDiagram = Diagram.parse(
-                                    "participant User\n" +
-                                    "User->Provider: Configure Service\n" +
-                                    "Provider->GitHub: Request Access\n" +
-                                    "GitHub->User:\n" +
-                                    "User-->GitHub:\n" +
-                                    "GitHub-->Provider: Grant Access\n" +
-                                    "Provider->GitHub: Configure Service- or WebHook\n" +
-                                    "GitHub->Provider: Call Hook\n" +
-                                    "Provider-->User: Provide Service\n"
-                            );
-                            accountIntegrationDiagram.drawSVG("accountIntegrationDiagram", {theme: 'hand'});
-                        </script>
                     </section>
                     <section>
                         <h3>Integration Chain</h3>
@@ -293,20 +250,6 @@
                         <p>
                             <div id="serviceChainDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
                         </p>
-                        <script>
-                            var serviceChainDiagram = Diagram.parse(
-                                    "participant User\n" +
-                                    "participant PAAS Provider\n" +
-                                    "participant QA Provider\n" +
-                                    "participant CI Server\n" +
-                                    "GitHub->CI Server: Trigger Build\n" +
-                                    "CI Server->QA Provider: Static Analysis\n" +
-                                    "QA Provider-->User: Send Results\n" +
-                                    "CI Server->PAAS Provider: Deploy\n" +
-                                    "PAAS Provider-->User: Running Instance\n"
-                            );
-                            serviceChainDiagram.drawSVG("serviceChainDiagram", {theme: 'hand'});
-                        </script>
                     </section>
                 </section>
 
@@ -991,6 +934,62 @@
 			});
 
 		</script>
+
+        <script src="js/raphael-min.js"></script>
+        <script src="js/underscore-min.js"></script>
+        <script src="js/sequence-diagram-min.js"></script>
+
+        <script>
+            var webHooksDiagram = Diagram.parse(
+                    "participant User\n" +
+                    "Provider->GitHub: Register OAuth Application\n" +
+                    "GitHub-->Provider: Client ID & Secret\n" +
+                    "User->Provider: Request WebHook URI\n" +
+                    "Provider-->User:\n" +
+                    "User->GitHub: Add WebHook\n" +
+                    "GitHub->Provider: Call WebHook\n" +
+                    "Provider-->User: Provide Service\n"
+            );
+            webHooksDiagram.drawSVG("webHooksDiagram", {theme: 'hand'});
+
+            var serviceHooksDiagram = Diagram.parse(
+                    "participant User\n" +
+                    "Provider->GitHub: Develop Service Hook\n" +
+                    "User->Provider: Request Access Key (optional)\n" +
+                    "Provider-->User:\n" +
+                    "User->GitHub: Configure Service Hook\n" +
+                    "GitHub->Provider: Call Service Hook\n" +
+                    "Provider-->User: Provide Service\n"
+            );
+            serviceHooksDiagram.drawSVG("serviceHooksDiagram", {theme: 'hand'});
+
+            var accountIntegrationDiagram = Diagram.parse(
+                    "participant User\n" +
+                    "User->Provider: Configure Service\n" +
+                    "Provider->GitHub: Request Access\n" +
+                    "GitHub->User:\n" +
+                    "User-->GitHub:\n" +
+                    "GitHub-->Provider: Grant Access\n" +
+                    "Provider->GitHub: Configure Service- or WebHook\n" +
+                    "GitHub->Provider: Call Hook\n" +
+                    "Provider-->User: Provide Service\n"
+            );
+            accountIntegrationDiagram.drawSVG("accountIntegrationDiagram", {theme: 'hand'});
+
+            var serviceChainDiagram = Diagram.parse(
+                    "participant User\n" +
+                    "participant PAAS Provider\n" +
+                    "participant QA Provider\n" +
+                    "participant CI Server\n" +
+                    "GitHub->CI Server: Trigger Build\n" +
+                    "CI Server->QA Provider: Static Analysis\n" +
+                    "QA Provider-->User: Send Results\n" +
+                    "CI Server->PAAS Provider: Deploy\n" +
+                    "PAAS Provider-->User: Running Instance\n"
+            );
+            serviceChainDiagram.drawSVG("serviceChainDiagram", {theme: 'hand'});
+
+        </script>
 
 	</body>
 </html>
