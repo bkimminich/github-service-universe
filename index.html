@@ -267,6 +267,23 @@
                             These do not require any manual setup by the user on the GitHub page. Instead they are configured behind the scenes by the service
                             provider or manually in the 3rd party application itself.
                         </p>
+                        <p>
+                        <div id="accountIntegrationDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
+                        </p>
+                        <script>
+                            var accountIntegrationDiagram = Diagram.parse(
+                                    "participant User\n" +
+                                    "User->Provider: Configure Service\n" +
+                                    "Provider->GitHub: Request Access\n" +
+                                    "GitHub->User:\n" +
+                                    "User-->GitHub:\n" +
+                                    "GitHub-->Provider: Grant Access\n" +
+                                    "Provider->GitHub: Configure Service- or WebHook\n" +
+                                    "GitHub->Provider: Call Hook\n" +
+                                    "Provider-->User: Provide Service\n"
+                            );
+                            accountIntegrationDiagram.drawSVG("accountIntegrationDiagram", {theme: 'hand'});
+                        </script>
                     </section>
                     <section>
                         <h3>Integration Chain</h3>
