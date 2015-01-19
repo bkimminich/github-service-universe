@@ -32,6 +32,10 @@
 			}
 		</script>
 
+        <script src="js/raphael-min.js"></script>
+        <script src="js/underscore-min.js"></script>
+        <script src="js/sequence-diagram-min.js"></script>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -187,6 +191,22 @@
                             <li>Used to integrate individual applications or tools</li>
                             <li>Installation on <a href="https://developer.github.com/v3/orgs/hooks/">organization</a> or <a href="https://developer.github.com/v3/repos/hooks/">repository level</a></li>
                         </ul>
+                        <p>
+                            <div id="webHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
+                        </p>
+                        <script>
+                            var webHooksDiagram = Diagram.parse(
+                                    "participant User\n" +
+                                    "Provider->GitHub: Register OAuth Application\n" +
+                                    "GitHub-->Provider: Client ID & Secret\n" +
+                                    "User->Provider: Request WebHook URI\n" +
+                                    "Provider-->User:\n" +
+                                    "User->GitHub: Add WebHook\n" +
+                                    "GitHub->Provider: Call WebHook\n" +
+                                    "Provider-->User: Provide Service\n"
+                            );
+                            webHooksDiagram.drawSVG("webHooksDiagram", {theme: 'hand'});
+                        </script>
                     </section>
                     <section>
                         <h3>Event Types &amp; Payloads</h3>
@@ -208,20 +228,34 @@
                     </section>
                     <section>
                         <h3>179 pre-defined Service Hooks</h3>
-                        <img src="assets/service-tagcat.png" width="600" style="background: none; border:none; box-shadow:none;"/>
+                        <img src="assets/service-tagcat.png" width="500" style="background: none; border:none; box-shadow:none;"/>
                         <p>
                             <a href="https://github.com/github/github-services">https://github.com/github/github-services</a>
                         </p>
                     </section>
                     <section>
-                        <h3>WebHooks vs. Service Hooks</h3>
+                        <h3>Service Hooks on GitHub</h3>
                         <ul>
                             <li>Service Hooks can only be installed on repositories</li>
                             <li>Only one Service Hook per integrator</li>
                             <li>Supported events depend on service implementation</li>
                             <li>Services come with their own unique configuration</li>
                         </ul>
-                        <hr>
+                        <p>
+                            <div id="serviceHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
+                        </p>
+                        <script>
+                            var serviceHooksDiagram = Diagram.parse(
+                                    "participant User\n" +
+                                    "Provider->GitHub: Develop Service Hook\n" +
+                                    "User->Provider: Request Access Key (optional)\n" +
+                                    "Provider-->User:\n" +
+                                    "User->GitHub: Configure Service Hook\n" +
+                                    "GitHub->Provider: Call Service Hook\n" +
+                                    "Provider-->User: Provide Service\n"
+                            );
+                            serviceHooksDiagram.drawSVG("serviceHooksDiagram", {theme: 'hand'});
+                        </script>
                         <p>
                             <small>GitHub recommends WebHooks for all new integrations using <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization. The existing <a href="https://github.com/github/github-services">github-service repository</a> is not accepting any new services.</small>
                         </p>
@@ -237,8 +271,25 @@
                     <section>
                         <h3>Integration Chain</h3>
                         <p>
-                            Some 3rd party services integrate via APIs of other service providers instead of using GitHub directly.
+                            Some 3rd party services integrate via APIs of other service providers instead of using GitHub directly. Example:
                         </p>
+                        <p>
+                            <div id="serviceChainDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
+                        </p>
+                        <script>
+                            var serviceChainDiagram = Diagram.parse(
+                                    "participant User\n" +
+                                    "participant PAAS Provider\n" +
+                                    "participant QA Provider\n" +
+                                    "participant CI Server\n" +
+                                    "GitHub->CI Server: Trigger Build\n" +
+                                    "CI Server->QA Provider: Static Analysis\n" +
+                                    "QA Provider-->User: Send Results\n" +
+                                    "CI Server->PAAS Provider: Deploy\n" +
+                                    "PAAS Provider-->User: Running Instance\n"
+                            );
+                            serviceChainDiagram.drawSVG("serviceChainDiagram", {theme: 'hand'});
+                        </script>
                     </section>
                 </section>
 
@@ -893,7 +944,6 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-        <script src="js/mermaid.full.min.js"></script>
 
 		<script>
 
