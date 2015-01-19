@@ -165,9 +165,12 @@
                         <p>
                             Individual &amp; Third Party Service Integration
                         </p>
-                        <img src="assets/logos/GitHub-Mark-Light-120px-plus.png" width="200" style="background: none; border:none; box-shadow:none;"/>
+                        <img src="assets/service-tagcat.png" width="400" style="background: none; border:none; box-shadow:none;"/>
                         <p>
-                            <a href="https://developer.github.com/webhooks/">https://developer.github.com/webhooks/</a>
+                            <a href="https://developer.github.com/webhooks">https://developer.github.com/webhooks</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/github/github-services">https://github.com/github/github-services</a>
                         </p>
                     </section>
                     <section>
@@ -186,34 +189,15 @@
                             <li>Subscription to events on GitHub.com</li>
                             <li>Used to integrate individual applications or tools</li>
                             <li>Installation on <a href="https://developer.github.com/v3/orgs/hooks/">organization</a> or <a href="https://developer.github.com/v3/repos/hooks/">repository level</a></li>
-                        </ul>
-                        <p>
-                            <div id="webHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>Event Types &amp; Payloads</h3>
-                        <ul>
-                            <li>GitHub sends JSON payloads via <code>HTTP POST</code> only</li>
                             <li>Types &amp; payloads mirror* the <a href="https://developer.github.com/v3/activity/events/types/">Event API</a></li>
                         </ul>
-                        <img src="assets/screenshots/ghservices01.png" width="600"/>
+                        <p></p>
+                        <div id="webHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
                         <p>
-                            <small>*Some event types only exist for WebHooks, others are only for GitHub internal use. The <code>push</code> payload is the only one that is augmented with more details specifically for the WebHook API.</small>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>Contents of a <code>push</code> event payload</h3>
-                        <img src="assets/screenshots/ghservices02.png" style="background: none; border:none; box-shadow:none;"/>
-                        <p>
-                            <small>Payload additionally contains <code>repository</code>, <code>head_commit</code>, <code>pusher</code> and <code>sender</code> information.</small>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>179 pre-defined Service Hooks</h3>
-                        <img src="assets/service-tagcat.png" width="500" style="background: none; border:none; box-shadow:none;"/>
-                        <p>
-                            <a href="https://github.com/github/github-services">https://github.com/github/github-services</a>
+                            <small>
+                                *Event types <code>commit_comment</code>, <code>create</code>, <code>delete</code>, <code>fork</code>, <code>gollum</code>, <code>issue_comment</code>, <code>issues</code>, <code>member</code>, <code>page_build</code>, <code>public</code>, <code>pull_request</code>, <code>push</code>, <code>watch</code>, <code>pull_request_review_comment</code>, <code>status</code>, <code>release</code>, <code>deployment</code> and <code>deployment_status</code> are supported on repository-level.
+                                On organization-level <code>membership</code>, <code>repository</code> and <code>team_add</code> are available.
+                            </small>
                         </p>
                     </section>
                     <section>
@@ -224,32 +208,32 @@
                             <li>Supported events depend on service implementation</li>
                             <li>Services come with their own unique configuration</li>
                         </ul>
-                        <p>
+                        <p></p>
                             <div id="serviceHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
-                        </p>
+                        <p></p>
                         <p>
                             <small>GitHub recommends WebHooks for all new integrations using <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization. The existing <a href="https://github.com/github/github-services">github-service repository</a> is not accepting any new services.</small>
                         </p>
                     </section>
                     <section>
                         <h3>Account Level Integration</h3>
-                        <p>
-                            Some 3rd party services integrate even more closely with GitHub by demanding account level access to public/private repositories.
-                            These do not require any manual setup by the user on the GitHub page. Instead they are configured behind the scenes by the service
-                            provider or manually in the 3rd party application itself.
-                        </p>
-                        <p>
-                            <div id="accountIntegrationDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
-                        </p>
+                        <ul>
+                            <li>Close integration with GitHub by demanding repo or account access</li>
+                            <li>Do not require any manual setup by the user on the GitHub page</li>
+                            <li>Configured by the service provider via its own user interface</li>
+                        </ul>
+                        <p></p>
+                        <div id="accountIntegrationDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
                     </section>
                     <section>
                         <h3>Integration Chain</h3>
-                        <p>
-                            Some 3rd party services integrate via APIs of other service providers instead of using GitHub directly. Example:
-                        </p>
-                        <p>
-                            <div id="serviceChainDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
-                        </p>
+                        <ul>
+                            <li>3rd party does not integrate directly with GitHub</li>
+                            <li>Instead integration with APIs of other service providers</li>
+                            <li>Very useful in Continuous Integration context. Example:</li>
+                        </ul>
+                        <p></p>
+                        <div id="serviceChainDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
                     </section>
                 </section>
 
@@ -980,11 +964,11 @@
                     "participant User\n" +
                     "participant PAAS Provider\n" +
                     "participant QA Provider\n" +
-                    "participant CI Server\n" +
-                    "GitHub->CI Server: Trigger Build\n" +
-                    "CI Server->QA Provider: Static Analysis\n" +
+                    "participant CI Provider\n" +
+                    "GitHub->CI Provider: Trigger Build\n" +
+                    "CI Provider->QA Provider: Static Analysis\n" +
                     "QA Provider-->User: Send Results\n" +
-                    "CI Server->PAAS Provider: Deploy\n" +
+                    "CI Provider->PAAS Provider: Deploy\n" +
                     "PAAS Provider-->User: Running Instance\n"
             );
             serviceChainDiagram.drawSVG("serviceChainDiagram", {theme: 'hand'});
