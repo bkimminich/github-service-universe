@@ -31,4 +31,4 @@ Presentation for the _IDEs & Tools_ track of [JavaLand 2015](http://www.javaland
 
 MIT licensed
 
-Copyright (C) 2014 Bjoern Kimminich, http://kimminich.de
+Copyright (C) 2015 Bjoern Kimminich, http://kimminich.de
