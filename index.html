@@ -189,17 +189,10 @@
                             <li>Subscription to events on GitHub.com</li>
                             <li>Used to integrate individual applications or tools</li>
                             <li>Installation on <a href="https://developer.github.com/v3/orgs/hooks/">organization</a> or <a href="https://developer.github.com/v3/repos/hooks/">repository level</a></li>
-                            <li>Types &amp; payloads mirror* the <a href="https://developer.github.com/v3/activity/events/types/">Event API</a></li>
+                            <li>Types &amp; payloads mirror the <a href="https://developer.github.com/v3/activity/events/types/">Event API</a></li>
                         </ul>
                         <p></p>
                         <div id="webHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
-                        <p></p>
-                        <p>
-                            <small>
-                                *Event types <code>commit_comment</code>, <code>create</code>, <code>delete</code>, <code>fork</code>, <code>gollum</code>, <code>issue_comment</code>, <code>issues</code>, <code>member</code>, <code>page_build</code>, <code>public</code>, <code>pull_request</code>, <code>push</code>, <code>watch</code>, <code>pull_request_review_comment</code>, <code>status</code>, <code>team_add</code>, <code>release</code>, <code>deployment</code> and <code>deployment_status</code> are supported on repository-level.
-                                On organization-level <code>membership</code> and <code>repository</code> are available.
-                            </small>
-                        </p>
                     </section>
                     <section>
                         <h3>Service Hooks on GitHub</h3>
@@ -210,11 +203,7 @@
                             <li>Services come with their own unique configuration</li>
                         </ul>
                         <p></p>
-                            <div id="serviceHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
-                        <p></p>
-                        <p>
-                            <small>GitHub recommends WebHooks for all new integrations using <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization. The existing <a href="https://github.com/github/github-services">github-service repository</a> is not accepting any new services.</small>
-                        </p>
+                        <div id="serviceHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
                     </section>
                     <section>
                         <h3>Account Level Integration</h3>
@@ -235,6 +224,25 @@
                         </ul>
                         <p></p>
                         <div id="serviceChainDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
+                    </section>
+                    <section>
+                        <h3>WebHooks for all new integrations</h3>
+                        <p>
+                            GitHub recommends WebHooks for all new integrations using <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization. The existing <a href="https://github.com/github/github-services">github-service repository</a> is not accepting any new services.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Adding a WebHook to a repository</h3>
+                        <img src="assets/screenshots/webhook01.png"/>
+                    </section>
+                    <section>
+                        <h3>Repository WebHook Event Types</h3>
+                        <img src="assets/screenshots/webhook02.png"/>
+                        <p>
+                            <small>
+                                Organization WebHooks send events for all repositories in that organization. New events for repository creation and team membership are also available on organization-level.
+                            </small>
+                        </p>
                     </section>
                 </section>
 
