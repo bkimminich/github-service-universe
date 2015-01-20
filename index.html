@@ -196,8 +196,8 @@
                         <p></p>
                         <p>
                             <small>
-                                *Event types <code>commit_comment</code>, <code>create</code>, <code>delete</code>, <code>fork</code>, <code>gollum</code>, <code>issue_comment</code>, <code>issues</code>, <code>member</code>, <code>page_build</code>, <code>public</code>, <code>pull_request</code>, <code>push</code>, <code>watch</code>, <code>pull_request_review_comment</code>, <code>status</code>, <code>release</code>, <code>deployment</code> and <code>deployment_status</code> are supported on repository-level.
-                                On organization-level <code>membership</code>, <code>repository</code> and <code>team_add</code> are available.
+                                *Event types <code>commit_comment</code>, <code>create</code>, <code>delete</code>, <code>fork</code>, <code>gollum</code>, <code>issue_comment</code>, <code>issues</code>, <code>member</code>, <code>page_build</code>, <code>public</code>, <code>pull_request</code>, <code>push</code>, <code>watch</code>, <code>pull_request_review_comment</code>, <code>status</code>, <code>team_add</code>, <code>release</code>, <code>deployment</code> and <code>deployment_status</code> are supported on repository-level.
+                                On organization-level <code>membership</code> and <code>repository</code> are available.
                             </small>
                         </p>
                     </section>
@@ -935,7 +935,7 @@
         <script>
             var webHooksDiagram = Diagram.parse(
                     "participant User\n" +
-                    "Provider->GitHub: Register OAuth Application\n" +
+                    "Provider->GitHub: Register OAuth Application (optional)\n" +
                     "GitHub-->Provider: Client ID & Secret\n" +
                     "User->Provider: Request WebHook URI\n" +
                     "Provider-->User:\n" +
