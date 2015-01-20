@@ -62,10 +62,10 @@
                             <li>Master of the (highly recommended) <a href="https://www.codeschool.com/paths/git">Code School Git Path</a></li>
                         </ul>
                         <a href="https://www.codeschool.com/users/804328">
-                            <img src="assets/badges/try-git.png" style="background: none; border:none; box-shadow:none;"/>
-                            <img src="assets/badges/git-real.png" style="background: none; border:none; box-shadow:none;"/>
-                            <img src="assets/badges/git-real2.png" style="background: none; border:none; box-shadow:none;"/>
-                            <img src="assets/badges/mastering-github.png" style="background: none; border:none; box-shadow:none;"/>
+                            <img src="assets/codeschool/try-git.png" style="background: none; border:none; box-shadow:none;"/>
+                            <img src="assets/codeschool/git-real.png" style="background: none; border:none; box-shadow:none;"/>
+                            <img src="assets/codeschool/git-real2.png" style="background: none; border:none; box-shadow:none;"/>
+                            <img src="assets/codeschool/mastering-github.png" style="background: none; border:none; box-shadow:none;"/>
                         </a>
                     </section>
 
@@ -88,8 +88,8 @@
                     <ol>
                         <li>A very brief introduction to <a href="https://github.com">GitHub</a></li>
                         <li>GitHub <a href="https://developer.github.com/v3/repos/hooks/">WebHooks</a> &amp; <a href="https://github.com/github/github-services">Services Hooks</a></li>
-                        <li>Showcase Universes  <a href="https://github.com/bkimminich/kata-tcg">kata-tcg</a> &amp; <a href="https://github.com/bkimminich/juice-shop">juice-shop</a></li>
-                        <li>Fifteen useful GitHub Services for your projects</li>
+                        <li>Showcase repositories  <a href="https://github.com/bkimminich/kata-tcg">kata-tcg</a> &amp; <a href="https://github.com/bkimminich/juice-shop">juice-shop</a></li>
+                        <li>15 valuable GitHub Services in practical use</li>
                     </ol>
 				</section>
 
@@ -112,7 +112,7 @@
                         <p>
                             ...cloud service providers with your code?
                         </p>
-                        <img src="assets/logos/cloud.jpg" width="500"/>
+                        <img src="assets/octocats/cloud.jpg" width="500"/>
                         <p>
                             <small>Fact #1: GitHub offers free hosting of public Git repositories!</small>
                         </p>
@@ -122,7 +122,7 @@
                         <p>
                             ...on <a href="http://en.wikipedia.org/wiki/Apache_Subversion">Subversion</a>?
                         </p>
-                        <img src="assets/logos/mummytocat.gif" width="500"/>
+                        <img src="assets/octocats/mummytocat.gif" width="500"/>
                         <p>
                             <small>Fact #2: Offering a sophisticated web-based graphical interface, GitHub still remains 100% compatible with the <code>git</code> CLI.</small>
                         </p>
@@ -132,7 +132,7 @@
                         <p>
                             ...<a href="http://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a>?
                         </p>
-                        <img src="assets/logos/spectrocat.png" width="500"/>
+                        <img src="assets/octocats/spectrocat.png" width="500"/>
                         <p>
                             <small>Fact #3: GitHub supports collaborative development through e.g. forking and pull requests.</small>
                         </p>
@@ -142,7 +142,7 @@
                         <p>
                             ...still <a href="http://en.wikipedia.org/wiki/Revision_Control_System">RCS</a> or <a href="http://en.wikipedia.org/wiki/Source_Code_Control_System">SCCS</a>?
                         </p>
-                        <img src="assets/logos/grim-repo.jpg" width="500"/>
+                        <img src="assets/octocats/grim-repo.jpg" width="500"/>
                         <p>
                             <small>Fact #4: GitHub (optionally) adds an issue tracker, wiki and project page to each repository.</small>
                         </p>
@@ -152,7 +152,7 @@
                         <p>
                             ...no version control system at all?
                         </p>
-                        <img src="assets/logos/nyantocat.gif" width="500"/>
+                        <img src="assets/octocats/nyantocat.gif" width="500"/>
                         <p>
                             <small>Fact #5: Repository statistics and social extras like Feeds, Followers &amp; Favorites are part of GitHub.</small>
                         </p>
@@ -189,16 +189,10 @@
                             <li>Subscription to events on GitHub.com</li>
                             <li>Used to integrate individual applications or tools</li>
                             <li>Installation on <a href="https://developer.github.com/v3/orgs/hooks/">organization</a> or <a href="https://developer.github.com/v3/repos/hooks/">repository level</a></li>
-                            <li>Types &amp; payloads mirror* the <a href="https://developer.github.com/v3/activity/events/types/">Event API</a></li>
+                            <li>Types &amp; payloads mirror the <a href="https://developer.github.com/v3/activity/events/types/">Event API</a></li>
                         </ul>
                         <p></p>
                         <div id="webHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
-                        <p>
-                            <small>
-                                *Event types <code>commit_comment</code>, <code>create</code>, <code>delete</code>, <code>fork</code>, <code>gollum</code>, <code>issue_comment</code>, <code>issues</code>, <code>member</code>, <code>page_build</code>, <code>public</code>, <code>pull_request</code>, <code>push</code>, <code>watch</code>, <code>pull_request_review_comment</code>, <code>status</code>, <code>release</code>, <code>deployment</code> and <code>deployment_status</code> are supported on repository-level.
-                                On organization-level <code>membership</code>, <code>repository</code> and <code>team_add</code> are available.
-                            </small>
-                        </p>
                     </section>
                     <section>
                         <h3>Service Hooks on GitHub</h3>
@@ -209,11 +203,7 @@
                             <li>Services come with their own unique configuration</li>
                         </ul>
                         <p></p>
-                            <div id="serviceHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
-                        <p></p>
-                        <p>
-                            <small>GitHub recommends WebHooks for all new integrations using <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization. The existing <a href="https://github.com/github/github-services">github-service repository</a> is not accepting any new services.</small>
-                        </p>
+                        <div id="serviceHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
                     </section>
                     <section>
                         <h3>Account Level Integration</h3>
@@ -234,6 +224,28 @@
                         </ul>
                         <p></p>
                         <div id="serviceChainDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
+                    </section>
+                    <section>
+                        <h3>What way of Integration should I use?</h3>
+                        <ul>
+                            <li><strong>GitHub recommends WebHooks</strong> for all new integrations</li>
+                            <li>If required use <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization</li>
+                            <li>The existing <a href="https://github.com/github/github-services">github-service repo</a> is not accepting any new services</li>
+                        </ul>
+                        <img src="assets/octocats/electrocat.png" height="400"/>
+                    </section>
+                    <section>
+                        <h3>Adding a WebHook to a repository</h3>
+                        <img src="assets/screenshots/webhook01.png"/>
+                    </section>
+                    <section>
+                        <h3>Repository WebHook Event Types</h3>
+                        <img src="assets/screenshots/webhook02.png"/>
+                        <p>
+                            <small>
+                                Organization WebHooks send events for all repositories in that organization. New events for repository creation and team membership are also available on organization-level.
+                            </small>
+                        </p>
                     </section>
                 </section>
 
@@ -276,7 +288,8 @@
                 </section>
 
                 <section>
-                    <h2>The Showcase Universes</h2>
+                    <h2>The Showcase Repositories</h2>
+                    <img src="assets/octocats/repo.png" width="500" style="background: rgba(255, 255, 255, 0.5)"/>
                 </section>
                 <section>
                     <section>
@@ -284,7 +297,7 @@
                         <p>
                             Code Kata for a two-player trading card game loosely based on Hearthstone - Heroes of Warcraft
                         </p>
-                        <img src="assets/logos/kata-tcg_logo.png"/>
+                        <img src="assets/logos/kata-tcg_logo.png" width="128"/>
                         <p>
                             <a href="https://github.com/bkimminich/kata-tcg">https://github.com/bkimminich/kata-tcg</a>
                         </p>
@@ -348,10 +361,13 @@
                 </section>
 
                 <section>
-                    <h2>Fifteen useful GitHub Services for your projects</h2>
+                    <h2>15 valuable GitHub Services</h2>
+                    <p>in practical use in <a href="https://github.com/bkimminich/kata-tcg">kata-tcg</a> &amp; <a href="https://github.com/bkimminich/juice-shop">juice-shop</a></p>
+                    <img src="assets/octocats/benevocats.png" width="500" style="background: rgba(255, 255, 255, 0.5)"/>
                 </section>
                 <section>
                     <h2>Notifications</h2>
+                    <img src="assets/octocats/supportcat.png" width="400" style="background: rgba(255, 255, 255, 1)"/>
                 </section>
                 <section>
                     <section>
@@ -424,6 +440,7 @@
 
                 <section>
                     <h2>Continuous Integration</h2>
+                    <img src="assets/octocats/jenktocat.jpg" width="400" style="background: rgba(255, 255, 255, 1)"/>
                 </section>
                 <section>
                     <section>
@@ -506,6 +523,7 @@
 
                 <section>
                     <h2>Quality Assurance</h2>
+                    <img src="assets/octocats/inspectocat.jpg" width="400" style="background: rgba(255, 255, 255, 1)"/>
                 </section>
                 <section>
                     <section>
@@ -624,6 +642,7 @@
 
                 <section>
                     <h2>Dependency Management</h2>
+                    <img src="assets/octocats/momtocat.png" width="400" style="background: rgba(255, 255, 255, 1)"/>
                 </section>
                 <section>
                     <section>
@@ -704,6 +723,7 @@
 
                 <section>
                     <h2>Continuous Deployment</h2>
+                    <img src="assets/octocats/constructocat2.jpg" width="400" style="background: rgba(255, 255, 255, 1)"/>
                 </section>
                 <section>
                     <section>
@@ -765,6 +785,7 @@
 
                 <section>
                     <h2>Collaboration</h2>
+                    <img src="assets/octocats/collabocats.jpg" width="400" style="background: rgba(255, 255, 255, 1)"/>
                 </section>
                 <section>
                     <section>
@@ -863,7 +884,37 @@
 
                 <section>
                     <section>
-                        <h1>Q&A</h1>
+                        <h2>One final takeaway</h2>
+                        <p>
+                            If the services you are using offer <span style="background: rgba(103, 103, 103, 1)">&nbsp;status&nbsp;</span><span style="background: rgba(216, 100, 78, 1)">&nbsp;badges&nbsp;</span> for your <code>README.md</code>...
+                        </p>
+                        <br>
+                        <h1 class="fragment">
+                            ...<span style="background: rgba(103, 103, 103, 1)">&nbsp;use&nbsp;</span><span style="background: rgba(215, 176, 38, 1)">&nbsp;them&nbsp;</span>...
+                        </h1>
+                        <br>
+                        <h3 class="fragment">
+                            ...on <span style="background: rgba(103, 103, 103, 1)">&nbsp;every&nbsp;</span><span style="background: rgba(89, 199, 48, 1)">&nbsp;occasion&nbsp;</span>...
+                        </h3>
+                    </section>
+                    <section>
+                        <h2>...because they are <span style="background: rgba(103, 103, 103, 1)">&nbsp;just&nbsp;</span><span style="background: rgba(34, 136, 194, 1)">&nbsp;cool&nbsp;</span>!</h2>
+                        <img src="assets/screenshots/badges01.png" height="190"/>
+                        <img src="assets/screenshots/badges02.png" height="190"/>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Thanks for your attention!</h1>
+                        <h3>by <span style="background: rgba(103, 103, 103, 1)">&nbsp;Björn&nbsp;</span><span style="background: rgba(244, 129, 66, 1)">&nbsp;Kimminich&nbsp;</span> / kimminich.de</h3>
+                        <p>
+                            These slides are publicly available on <a href="https://github.com/bkimminich/github-service-universe">GitHub</a> and <a href="">Slideshare</a>.
+                        </p>
+                    </section>
+                    <section>
+                        <h1>Q&amp;A</h1>
+                        <img src="assets/octocats/riddlocat.png" width="400" style="background: none; border:none; box-shadow:none;"/>
                     </section>
                     <section>
                         <h2>Credits</h2>
@@ -872,16 +923,12 @@
                             <li><a href="http://bramp.github.io/js-sequence-diagrams/">js-sequence-diagrams</a> - Turns text into UML sequence diagrams</li>
                             <li><a href="https://octodex.github.com/">GitHub Octodex</a> - The official Octocat gallery</li>
                         </ul>
+                        <hr>
+                        <p>
+                            <small>Copyright (c) 2015 Björn Kimminich</small>
+                        </p>
                     </section>
                 </section>
-
-				<section>
-					<h1>Thanks for your attention!</h1>
-					<h3>by Björn Kimminich / kimminich.de</h3>
-                    <p>
-                        These slides are publicly available on <a href="https://github.com/bkimminich/github-service-universe">GitHub</a> and <a href="">Slideshare</a>.
-                    </p>
-				</section>
 
 			</div>
 
@@ -927,7 +974,7 @@
         <script>
             var webHooksDiagram = Diagram.parse(
                     "participant User\n" +
-                    "Provider->GitHub: Register OAuth Application\n" +
+                    "Provider->GitHub: Register OAuth Application (optional)\n" +
                     "GitHub-->Provider: Client ID & Secret\n" +
                     "User->Provider: Request WebHook URI\n" +
                     "Provider-->User:\n" +
