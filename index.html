@@ -17,6 +17,7 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="css/custom.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -328,7 +329,7 @@
                     <section>
                         <h2>Juice Shop</h2>
                         <p>
-                            An intentionally insecure RIA suitable for pentesting and security awareness trainings written in pure Javascript
+                            An intentionally insecure Javascript Web Application
                         </p>
                         <img src="assets/logos/juiceshop_logo_128px.jpg"/>
                         <p>
@@ -713,10 +714,17 @@
                         </p>
                     </section>
                     <section>
-                        <h3>Dependency status with security advisories</h3>
+                        <h3>Dependency status with security advisory</h3>
                         <img src="assets/screenshots/daviddm02.png"/>
                         <p>
                             <small>A module without security warnings might still contain undiscovered vulnerabilities! On the other hand proven vulnerabilities of a module might be irrelevant in the context it is used in.</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Security vulnerability details</h3>
+                        <img src="assets/screenshots/daviddm03.png"/>
+                        <p>
+                            <small>David-DM cooperates with <a href="https://nodesecurity.io">Node Security Project</a> to determine and link to vulnerabilities.</small>
                         </p>
                     </section>
                 </section>
@@ -839,12 +847,24 @@
                         <img src="assets/screenshots/bountysource01.png"/>
                     </section>
                     <section>
-                        <h3>Picking <a href="https://www.bountysource.com/issues/848108-handle-ant-s-junit-xml-formatted-output-from-test-spec-runs">an issue</a> to place a bounty on</h3>
+                        <h3>Picking <a href="https://www.bountysource.com/issues/7953454-new-logo-for-juice-shop">an issue</a> to place a bounty on</h3>
                         <img src="assets/screenshots/bountysource02.png"/>
                     </section>
                     <section>
-                        <h3>Placing a 5$ bounty on a Travis-CI issue</h3>
+                        <h3>Placing a 10$ bounty for a new logo</h3>
                         <img src="assets/screenshots/bountysource03.png"/>
+                    </section>
+                    <section>
+                        <h3>The new bounty in the Activity feed</h3>
+                        <img src="assets/screenshots/bountysource05.png"/>
+                    </section>
+                    <section>
+                        <h3>Issue augmented with bounty information</h3>
+                        <img src="assets/screenshots/bountysource06.png"/>
+                    </section>
+                    <section>
+                        <h3>Developer starting to work on issue</h3>
+                        <img src="assets/screenshots/bountysource07.png"/>
                     </section>
                     <section>
                         <h3>A <a href="https://www.bountysource.com/issues/4664936-create-application-logo">resolved issue</a> with claimed 5$ bounty</h3>
@@ -866,7 +886,7 @@
                         <h3>The official <a href="https://gitter.im/bkimminich/juice-shop">Gitter chatroom of Juice-Shop</a></h3>
                         <img src="assets/screenshots/gitter01.png"/>
                         <p>
-                            <small>Disclaimer: Chatroom might appear even more desolated on screenshot than in reality.</small>
+                            <small>Disclaimer: Chatroom might appear more desolated on screenshot than in reality.</small>
                         </p>
                     </section>
                     <section>
@@ -1023,5 +1043,17 @@
 
         </script>
 
-	</body>
+        <div class="hidden-mobile">
+            <div style="display: block; position: absolute; bottom: 14px; left: 50%; margin-left: -230px; z-index: 20;">
+                <a href="https://twitter.com/bkimminich" class="twitter-follow-button" data-show-count="false">Follow @bkimminich</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://github-service-universe.kimminich.de" data-text="Exploring the GitHub Service Universe (to be presented at @JavaLandConf 2015)" data-via="bkimminich" data-hashtags="githubservices">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <iframe src="https://ghbtns.com/github-btn.html?user=bkimminich&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+                <iframe src="https://ghbtns.com/github-btn.html?user=bkimminich&repo=github-service-universe&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+            </div>
+        </div>
+
+
+    </body>
 </html>
