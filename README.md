@@ -27,8 +27,6 @@ Presentation for the _IDEs & Tools_ track of [JavaLand 2015](http://www.javaland
 - Octocat images from [GitHub Octodex](https://octodex.github.com/)
 - All logos used in this presentation belong to their respective owners
 
-## License
-
-MIT licensed
+## Copyright
 
 Copyright (C) 2015 Bjoern Kimminich, http://kimminich.de

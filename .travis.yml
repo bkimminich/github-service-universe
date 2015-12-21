@@ -1,18 +1,5 @@
 language: node_js
 node_js:
-  - 0.10
-env:
-  global:
-  - secure: Jq0jebYVdsrxslFoVwGlp4d2wj4iSN1Qze0qG2EFDmAba/YP+6fTe4Ycj7w0HcTmPLfW00dEFDXhri873ZKQ2DXPrEeY5io65BBrQhePlrWxySPMui9r2FDo+eXdFXaj7qC7Ne0RfVfEU4wX+v/N0BGnm77jlxqc3AwoKX/x9bM=
-  - secure: dVvyml5b4JBK5U5qka2CxgMTQRe/jwO33397OWmm3ZHjhvkAe5+DiUu6C5272Wqayg+2R/d3pv6pcqmKikFXW+0Hg5oXImQPt74/66CHoX0GfmBUY2Hw8eJDiB8d/sYLBcij2jv3jExRvl8ti9+vG7mgUOBZpqxsWkaLhk5NcI4=
+  - 4.1.1
 before_script:
   - npm install -g grunt-cli
-  - sudo apt-get install wput
-after_script:
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && wput index.html ftp://$FTP_USER:$FTP_PASSWORD@ftp.strato.de/github-service-universe/ -u
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && wput assets ftp://$FTP_USER:$FTP_PASSWORD@ftp.strato.de/github-service-universe/ -u
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && wput css ftp://$FTP_USER:$FTP_PASSWORD@ftp.strato.de/github-service-universe/ -u
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && wput js ftp://$FTP_USER:$FTP_PASSWORD@ftp.strato.de/github-service-universe/ -u
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && wput lib ftp://$FTP_USER:$FTP_PASSWORD@ftp.strato.de/github-service-universe/ -u
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && wput plugin ftp://$FTP_USER:$FTP_PASSWORD@ftp.strato.de/github-service-universe/ -u
-sudo: required
